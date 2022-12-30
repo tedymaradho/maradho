@@ -1,12 +1,24 @@
 import FirstPortfolio from "../assets/portfolio-1.png";
-import styled from "styled-components";
 import { ButtonInverse } from "../styles/Button";
 import { BsArrowUpRight } from "react-icons/bs";
+import { device } from "../styles/Device";
+import styled from "styled-components";
 
 const Container = styled.div`
   height: 650px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  @media ${device.mobileS} {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+  }
+  @media ${device.tablet} {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const Left = styled.div`
@@ -14,6 +26,15 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   opacity: 80%;
+
+  @media ${device.mobileS} {
+    align-items: center;
+    text-align: center;
+  }
+
+  @media ${device.tablet} {
+    text-align: left;
+  }
 
   & button {
     width: fit-content;
@@ -27,18 +48,38 @@ const Company = styled.p`
 
 const Title = styled.h1`
   font-size: 40px;
-  margin-bottom: 40px;
-  color: ${(props) => props.theme.main}; ;
+  color: ${(props) => props.theme.main};
+
+  @media ${device.mobileS} {
+    margin-bottom: 20px;
+  }
+
+  @media ${device.tablet} {
+    margin-bottom: 40px;
+  }
 `;
 
 const Right = styled.div`
   display: flex;
   align-items: center;
-  justify-content: right;
+
+  @media ${device.mobileS} {
+    order: -1;
+    justify-content: center;
+  }
+  @media ${device.tablet} {
+    justify-content: right;
+  }
 `;
 
 const Image = styled.img`
-  height: 400px;
+  @media ${device.mobileS} {
+    height: 240px;
+  }
+  @media ${device.tablet} {
+    height: 400px;
+  }
+
   box-shadow: 5px 35px 32px -30px rgba(81, 115, 78, 0.9);
 `;
 
