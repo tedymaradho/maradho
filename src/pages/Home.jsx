@@ -39,12 +39,14 @@ const HeaderShape = styled.div`
   top: 0;
   right: 0;
   z-index: -1;
+
   @media ${device.mobileS} {
     clip-path: polygon(81.75% 57.3%, 100% 57.3%, 100% 100%, 9.25% 100%);
   }
   @media ${device.tablet} {
     clip-path: polygon(71% 0%, 100% 0%, 100% 100%, 45.25% 100%);
   }
+
   background-color: #51734e;
 `;
 
@@ -86,9 +88,13 @@ const SectionProject = styled.div`
 
 const SectionTestimoni = styled.div`
   ${SectionDefault}
-  background-color: ${(props) => props.theme.bg};
+  background-color: transparent;
   position: relative;
-  z-index: -1;
+
+  @media ${device.tablet} {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 const TestiShape = styled.div`

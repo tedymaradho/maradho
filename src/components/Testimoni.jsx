@@ -5,36 +5,28 @@ import { device } from "../styles/Device";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 650px;
-
   @media ${device.mobileS} {
-    width: 100vh;
+    width: 80vh;
     display: flex;
     flex-direction: column;
     text-align: center;
   }
   @media ${device.tablet} {
     width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
     text-align: left;
   }
 `;
 
-const Left = styled.div`
+const Left = styled.div``;
+
+const TitleBox = styled.div`
+  height: 325px;
   display: flex;
   align-items: center;
-
-  @media ${device.mobileS} {
-    width: 100vh;
-    height: 100%;
-    justify-content: center;
-  }
-  @media ${device.tablet} {
-    width: 100%;
-    height: 100%;
-  }
+  justify-content: center;
 `;
 
 const Title = styled.h1`
@@ -55,26 +47,29 @@ const BgSpan = styled.span`
 `;
 
 const Right = styled.div`
-  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
 
   @media ${device.mobileS} {
-    gap: 10px;
+    height: 325px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
   }
+
   @media ${device.tablet} {
-    gap: 50px;
+    gap: 60px;
   }
 `;
 
 const TestiBox = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
 
   @media ${device.mobileS} {
-    width: 100vw;
-    flex-direction: column;
+    width: 80vw;
+    gap: 10px;
   }
 
   @media ${device.tablet} {
@@ -85,25 +80,31 @@ const TestiBox = styled.div`
 `;
 
 const QuoteIcon = styled(FaQuoteLeft)`
+  color: lightgray;
+
   @media ${device.mobileS} {
-    display: none;
+    size: 1em;
   }
   @media ${device.tablet} {
-    display: inline-block;
+    size: 1.5em;
   }
 `;
 
 const TextBox = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+
   opacity: 80%;
 
   @media ${device.mobileS} {
+    align-items: flex-start;
+    text-align: left;
     width: 100vw;
+    gap: 10px;
   }
   @media ${device.tablet} {
     width: 100%;
+    gap: 20px;
   }
 `;
 
@@ -143,19 +144,21 @@ function Testimoni() {
   return (
     <Container>
       <Left>
-        <Title>
-          <BgSpan>What’s</BgSpan>
-          <br />
-          <BgSpan>my client</BgSpan>
-          <br />
-          <BgSpan>say</BgSpan>
-        </Title>
+        <TitleBox>
+          <Title>
+            <BgSpan>What’s</BgSpan>
+            <br />
+            <BgSpan>my client</BgSpan>
+            <br />
+            <BgSpan>say</BgSpan>
+          </Title>
+        </TitleBox>
       </Left>
       <Right>
         <TestiBox>
           <Photo src={Person1} alt="Person Photo 1" />
           <TextBox>
-            <QuoteIcon size="1.5em" color="lightgray" />
+            <QuoteIcon />
             <Text>
               Tedy is a freelancer who prioritizes client support, he provides
               support in the form of solutions and good ideas, I was greatly
@@ -167,7 +170,7 @@ function Testimoni() {
         <TestiBox>
           <Photo src={Person2} alt="Person Photo 2" />
           <TextBox>
-            <QuoteIcon size="1.5em" color="lightgray" />
+            <QuoteIcon />
             <Text>
               I've seen some of our competitor's website designs, but I think
               Tedy's design is more pleasing to the eye, more modern, simple,
