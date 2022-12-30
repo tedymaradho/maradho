@@ -6,10 +6,10 @@ import styled from "styled-components";
 
 const Container = styled.div`
   @media ${device.mobileS} {
-    width: 80vh;
+    width: 100vh;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    padding: 0 30px;
   }
   @media ${device.tablet} {
     width: 100%;
@@ -26,7 +26,9 @@ const TitleBox = styled.div`
   height: 325px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 0 84px;
 `;
 
 const Title = styled.h1`
@@ -52,7 +54,7 @@ const Right = styled.div`
   @media ${device.mobileS} {
     height: 325px;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 30px;
   }

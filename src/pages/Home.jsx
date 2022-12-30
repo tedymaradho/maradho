@@ -94,6 +94,7 @@ const SectionTestimoni = styled.div`
   @media ${device.tablet} {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
   }
 `;
 
