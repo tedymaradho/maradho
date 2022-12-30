@@ -19,6 +19,10 @@ const Title = styled.h1`
   line-height: 80px;
 `;
 
+const TitleSpan = styled.span`
+  background-color: ${(props) => props.theme.bg}; ;
+`;
+
 const Low = styled.span`
   opacity: 50%;
 `;
@@ -60,15 +64,17 @@ function Service() {
     <Container>
       <Left>
         <Title>
-          Solving
+          <TitleSpan>Solving</TitleSpan>
           <br />
-          problems&nbsp;
-          <Low>
-            by
-            <br />
-            the
-          </Low>
-          &nbsp; services
+          <TitleSpan>
+            problems&nbsp;
+            <Low>by</Low>
+          </TitleSpan>
+          <br />
+          <TitleSpan>
+            <Low>the</Low>
+            &nbsp; services
+          </TitleSpan>
         </Title>
         <Desc>
           Provide solutions to your problems, and
