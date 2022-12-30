@@ -1,10 +1,18 @@
 import { BsGithub, BsInstagram, BsLinkedin, BsYoutube } from "react-icons/bs";
+import { device } from "../styles/Device";
 import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+
+  @media ${device.mobileS} {
+    justify-content: center;
+  }
+  @media ${device.tablet} {
+    justify-content: flex-start;
+  }
 `;
 
 const Link = styled.a`
