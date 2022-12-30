@@ -68,6 +68,7 @@ const Right = styled.div`
     justify-content: center;
   }
   @media ${device.tablet} {
+    order: 1;
     justify-content: right;
   }
 `;
