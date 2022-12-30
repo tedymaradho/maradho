@@ -2,12 +2,11 @@ import Person1 from "../assets/person-1.png";
 import Person2 from "../assets/person-2.png";
 import { FaQuoteLeft } from "react-icons/fa";
 import styled from "styled-components";
-import { device } from "../styles/Device";
 
 const Container = styled.div`
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 `;
 
@@ -16,20 +15,17 @@ const Left = styled.div``;
 const Title = styled.h1`
   line-height: 80px;
   color: ${(props) => props.theme.bg};
-  transform: translateY(-20%);
+  font-size: 60px;
+`;
 
-  @media ${device.tablet} {
-    font-size: 50px;
-  }
-  @media ${device.laptop} {
-    font-size: 55px;
-  }
+const BgSpan = styled.span`
+  background-color: ${(props) => props.theme.main}; ;
 `;
 
 const Right = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
 `;
 
 const TestiBox = styled.div`
@@ -38,25 +34,26 @@ const TestiBox = styled.div`
   gap: 20px;
 
   &:last-child {
-    transform: translateX(-18.5%);
+    transform: translateX(-10%);
   }
 `;
 
 const TextBox = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   opacity: 80%;
 `;
 
 const Photo = styled.img``;
 
 const Text = styled.p`
-  line-height: 27px;
+  font-size: 14px;
+  line-height: 24px;
 `;
 
 const Owner = styled.span`
-  font-size: 12px;
+  font-size: 10px;
   color: ${(props) => props.theme.main};
 `;
 
@@ -65,16 +62,21 @@ function Testimoni() {
     <Container>
       <Left>
         <Title>
-          What’s
+          <BgSpan>What’s</BgSpan>
           <br />
-          my client
+          <BgSpan>my client</BgSpan>
           <br />
-          say
+          <BgSpan>say</BgSpan>
         </Title>
       </Left>
       <Right>
         <TestiBox>
-          <Photo src={Person1} alt="Person Photo 1" />
+          <Photo
+            src={Person1}
+            alt="Person Photo 1"
+            width="150px"
+            height="150px"
+          />
           <TextBox>
             <FaQuoteLeft size="1.5em" color="lightgray" />
             <Text>
@@ -86,7 +88,12 @@ function Testimoni() {
           </TextBox>
         </TestiBox>
         <TestiBox>
-          <Photo src={Person2} alt="Person Photo 2" />
+          <Photo
+            src={Person2}
+            alt="Person Photo 2"
+            width="150px"
+            height="150px"
+          />
           <TextBox>
             <FaQuoteLeft size="1.5em" color="lightgray" />
             <Text>

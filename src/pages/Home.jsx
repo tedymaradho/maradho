@@ -1,7 +1,5 @@
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import RectangleHeader from "../assets/rectangle-header.png";
-import RectangleTestimoni from "../assets/rectangle-testimoni.png";
 import Service from "../components/Service";
 import Client from "../components/Client";
 import Sosmed from "../components/Sosmed";
@@ -30,10 +28,18 @@ const Wrapper = styled.div`
 const SectionHeader = styled.div`
   ${SectionDefault}
   background-color: ${(props) => props.theme.bg};
-  background-image: url(${RectangleHeader});
-  background-repeat: no-repeat;
-  background-size: 664px 768px;
-  background-position: right;
+  position: relative;
+  z-index: -1;
+`;
+
+const HeaderShape = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  clip-path: polygon(71% 0%, 100% 0%, 100% 100%, 45.25% 100%);
+  background-color: #51734e;
 `;
 
 const SectionClient = styled.div`
@@ -55,16 +61,26 @@ const SectionProject = styled.div`
 const SectionTestimoni = styled.div`
   ${SectionDefault}
   background-color: ${(props) => props.theme.bg};
-  background-image: url(${RectangleTestimoni});
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 48.61%;
+  /* 
   @media ${device.laptopL} {
     background-size: 60%;
   }
   @media ${device.desktop} {
     background-size: 65%;
-  }
+  } */
+  position: relative;
+  z-index: -1;
+`;
+
+const TestiShape = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  clip-path: polygon(0% 0%, 54.75% 0%, 35.75% 100%, 0% 100%);
+  background-color: #51734e;
 `;
 
 const SectionSosmed = styled(SectionClient)``;
@@ -81,6 +97,7 @@ function Home() {
         <Wrapper>
           <Navbar />
           <Header />
+          <HeaderShape />
         </Wrapper>
       </SectionHeader>
       <SectionClient>
@@ -102,6 +119,7 @@ function Home() {
         <Wrapper>
           <Testimoni />
         </Wrapper>
+        <TestiShape />
       </SectionTestimoni>
       <SectionSosmed>
         <Wrapper>

@@ -1,4 +1,3 @@
-import { device } from "../styles/Device";
 import MyPhoto from "../assets/me.png";
 import { ButtonInverse, ButtonPrimary } from "../styles/Button";
 import { BsArrowUpRight } from "react-icons/bs";
@@ -12,10 +11,6 @@ const Container = styled.div`
   height: calc(100vh - 124px);
   display: grid;
   grid-template-columns: 1fr 1fr;
-
-  @media ${device.tablet} {
-    /*  */
-  }
 `;
 
 const Left = styled.div`
