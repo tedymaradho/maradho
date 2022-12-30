@@ -3,14 +3,22 @@ import { ButtonInverse, ButtonPrimary } from "../styles/Button";
 import { BsArrowUpRight } from "react-icons/bs";
 import { FiSend } from "react-icons/fi";
 import { init } from "ityped";
-import styled from "styled-components";
+import { device } from "../styles/Device";
 import { useEffect, useRef } from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
-  width: 100%;
+  width: 100vw;
   height: calc(650px - 124px);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  @media ${device.mobileS} {
+    display: flex;
+    flex-direction: column;
+  }
+  @media ${device.tablet} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const Left = styled.div`
@@ -19,6 +27,13 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media ${device.mobileS} {
+    text-align: center;
+  }
+  @media ${device.tablet} {
+    text-align: left;
+  }
 `;
 
 const Title = styled.h1`
@@ -26,21 +41,60 @@ const Title = styled.h1`
   font-weight: bold;
   margin-bottom: 20px;
   color: ${(props) => props.theme.main};
+
+  @media ${device.mobileS} {
+    font-size: 50px;
+  }
+  @media ${device.tablet} {
+    font-size: 70px;
+  }
 `;
 
 const MaradhoSpan = styled.span`
-  background-color: ${(props) => props.theme.bg};
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: ${(props) => props.theme.bg};
+    z-index: -1;
+  }
 `;
 
 const Desc = styled.p`
-  opacity: 80%;
   margin-bottom: 50px;
   line-height: 33px;
+  opacity: 85%;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: ${(props) => props.theme.bg};
+    z-index: -1;
+  }
 `;
 
 const ButtonBox = styled.div`
-  display: flex;
   gap: 33px;
+  @media ${device.mobileS} {
+    display: none;
+  }
+  @media ${device.tablet} {
+    display: flex;
+  }
 `;
 
 const Right = styled.div`
@@ -48,7 +102,13 @@ const Right = styled.div`
   height: 100%;
   background-image: url(${MyPhoto});
   background-repeat: no-repeat;
-  background-size: 529px 690px;
+  @media ${device.mobileS} {
+    background-size: 300px 461px;
+    background-position: center 10%;
+  }
+  @media ${device.tablet} {
+    background-size: 529px 690px;
+  }
 `;
 
 function Header() {

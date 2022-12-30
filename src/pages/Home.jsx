@@ -74,13 +74,6 @@ const SectionProject = styled.div`
 const SectionTestimoni = styled.div`
   ${SectionDefault}
   background-color: ${(props) => props.theme.bg};
-  /* 
-  @media ${device.laptopL} {
-    background-size: 60%;
-  }
-  @media ${device.desktop} {
-    background-size: 65%;
-  } */
   position: relative;
   z-index: -1;
 `;

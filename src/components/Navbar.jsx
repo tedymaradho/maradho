@@ -1,5 +1,6 @@
 import Logo from "../assets/logo.png";
 import { ButtonInverseSmall } from "../styles/Button";
+import { device } from "../styles/Device";
 import styled from "styled-components";
 
 const Container = styled.div`
