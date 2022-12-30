@@ -25,11 +25,8 @@ const Title = styled.h1`
   font-size: 70px;
   font-weight: bold;
   margin-bottom: 20px;
-`;
-
-const MaradhoSpan = styled.span`
-  color: ${(props) => props.theme.main};
   background-color: ${(props) => props.theme.bg};
+  color: ${(props) => props.theme.main};
 `;
 
 const Desc = styled.p`
@@ -68,7 +65,7 @@ function Header() {
         <Title>
           Tedy
           <br />
-          <MaradhoSpan>Maradho</MaradhoSpan>&nbsp;Pasa
+          Maradho Pasa
         </Title>
         <Desc>
           Hi, I'm a <span ref={textRef}></span>
