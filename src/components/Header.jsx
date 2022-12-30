@@ -8,21 +8,21 @@ import { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 100vw;
   height: calc(650px - 124px);
 
   @media ${device.mobileS} {
+    width: 100vw;
     display: flex;
     flex-direction: column;
   }
   @media ${device.tablet} {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 `;
 
 const Left = styled.div`
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;

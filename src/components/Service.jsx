@@ -1,8 +1,16 @@
+import { device } from "../styles/Device";
 import styled from "styled-components";
 
 const Container = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  @media ${device.mobileS} {
+    display: flex;
+    flex-direction: column;
+  }
+  @media ${device.tablet} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   align-items: center;
   height: 650px;
 `;

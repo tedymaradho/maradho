@@ -39,7 +39,12 @@ const HeaderShape = styled.div`
   top: 0;
   right: 0;
   z-index: -1;
-  clip-path: polygon(71% 0%, 100% 0%, 100% 100%, 45.25% 100%);
+  @media ${device.mobileS} {
+    clip-path: polygon(81.75% 57.3%, 100% 57.3%, 100% 100%, 9.25% 100%);
+  }
+  @media ${device.tablet} {
+    clip-path: polygon(71% 0%, 100% 0%, 100% 100%, 45.25% 100%);
+  }
   background-color: #51734e;
 `;
 
@@ -61,10 +66,17 @@ const ServiceShape = styled.div`
   width: 55%;
   height: 100%;
   position: absolute;
-  top: 0;
+
   right: 0;
   z-index: -2;
   background-color: #51734e;
+
+  @media ${device.mobileS} {
+    top: 50%;
+  }
+  @media ${device.tablet} {
+    top: 0;
+  }
 `;
 
 const SectionProject = styled.div`
