@@ -4,6 +4,7 @@ import { device } from "../styles/Device";
 import { FcMenu } from "react-icons/fc";
 import { AiOutlineClose } from "react-icons/ai";
 import styled from "styled-components";
+import { useState } from "react";
 
 const Container = styled.div`
   height: 124px;
@@ -44,11 +45,17 @@ const Navlink = styled.div`
 
   @media ${device.mobileS} {
     flex-direction: column;
-    margin-top: 200px;
+    position: absolute;
+    top: ${(props) => props.dropdownOpen && "10%"};
+    left: ${(props) => (props.dropdownOpen ? "50%" : "150%")};
+    transform: translateX(-50%);
+    z-index: 3;
   }
   @media ${device.tablet} {
     flex-direction: row;
     align-items: center;
+    position: static;
+    transform: none;
     opacity: 80%;
     margin-top: 0;
   }
@@ -101,9 +108,9 @@ const CloseIcon = styled(AiOutlineClose)`
   }
 `;
 
-const BackdropMenu = styled.div`
+const DropdownMenu = styled.div`
   width: 100vw;
-  height: 350px;
+  height: 400px;
   position: absolute;
   z-index: 2;
   top: 0;
@@ -120,13 +127,17 @@ const BackdropMenu = styled.div`
 `;
 
 function Navbar() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const dropdownToggleHandler = () => setDropdownOpen(!dropdownOpen);
+
   return (
     <Container>
       <LogoBox>
         <LogoImage src={Logo} alt="Logo Maradho" />
         <LogoName>Maradho</LogoName>
       </LogoBox>
-      <Navlink>
+      <Navlink dropdownOpen={dropdownOpen}>
         <ButtonLink>Home</ButtonLink>
         <ButtonLink>Services</ButtonLink>
         <ButtonLink>Portfolio</ButtonLink>
@@ -134,9 +145,11 @@ function Navbar() {
         <ButtonLink>Tools</ButtonLink>
         <ButtonLink>Contact</ButtonLink>
       </Navlink>
-      <MenuIcon size="2.5em" />
-      <CloseIcon size="2.5em" />
-      <BackdropMenu></BackdropMenu>
+      <MenuIcon size="2.5em" onClick={dropdownToggleHandler} />
+      {dropdownOpen && (
+        <CloseIcon size="2.5em" onClick={dropdownToggleHandler} />
+      )}
+      {dropdownOpen && <DropdownMenu />}
     </Container>
   );
 }
