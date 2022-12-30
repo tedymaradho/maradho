@@ -139,7 +139,7 @@ function Header() {
         <Desc>
           Hi, I'm a <span ref={textRef}></span>
           <br />
-          serving design and development to become a stunning website.
+          Serving design and development to become a stunning website.
         </Desc>
         <ButtonBox>
           <ButtonPrimary>

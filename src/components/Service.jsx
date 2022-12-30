@@ -3,10 +3,15 @@ import styled from "styled-components";
 
 const Container = styled.div`
   @media ${device.mobileS} {
+    width: 100vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    padding-top: 20px;
   }
   @media ${device.tablet} {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -19,12 +24,26 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media ${device.mobileS} {
+    text-align: center;
+  }
+  @media ${device.tablet} {
+    text-align: left;
+  }
 `;
 
 const Title = styled.h1`
   color: ${(props) => props.theme.main};
-  font-size: 60px;
-  line-height: 80px;
+
+  @media ${device.mobileS} {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  @media ${device.tablet} {
+    font-size: 60px;
+    line-height: 80px;
+  }
 `;
 
 const TitleSpan = styled.span`
@@ -38,7 +57,7 @@ const Low = styled.span`
 const Desc = styled.p`
   opacity: 80%;
   line-height: 30px;
-  margin-top: 35px;
+  margin-top: 20px;
 `;
 
 const Right = styled.div`
@@ -48,23 +67,45 @@ const Right = styled.div`
 const List = styled.div`
   display: flex;
   align-items: center;
-  gap: 30px;
 
-  &:first-child {
-    gap: 47px;
+  @media ${device.mobileS} {
+    gap: 20px;
+
+    &:first-child {
+      gap: 37px;
+    }
+  }
+  @media ${device.tablet} {
+    gap: 30px;
+
+    &:first-child {
+      gap: 47px;
+    }
   }
 `;
 
 const Number = styled.h1`
-  font-size: 135px;
   font-weight: 300;
   opacity: 10%;
+
+  @media ${device.mobileS} {
+    font-size: 85px;
+  }
+  @media ${device.tablet} {
+    font-size: 135px;
+  }
 `;
 
 const Text = styled.h1`
-  font-size: 50px;
   opacity: 70%;
   font-weight: 300;
+
+  @media ${device.mobileS} {
+    font-size: 30px;
+  }
+  @media ${device.tablet} {
+    font-size: 50px;
+  }
 `;
 
 function Service() {

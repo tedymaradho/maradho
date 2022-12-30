@@ -63,7 +63,6 @@ const SectionService = styled.div`
 `;
 
 const ServiceShape = styled.div`
-  width: 55%;
   height: 100%;
   position: absolute;
 
@@ -72,9 +71,11 @@ const ServiceShape = styled.div`
   background-color: #51734e;
 
   @media ${device.mobileS} {
+    width: 100%;
     top: 50%;
   }
   @media ${device.tablet} {
+    width: 55%;
     top: 0;
   }
 `;
