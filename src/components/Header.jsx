@@ -33,7 +33,8 @@ const Title = styled.h1`
 `;
 
 const MaradhoSpan = styled.span`
-  color: ${(props) => props.theme.main}; ;
+  color: ${(props) => props.theme.main};
+  background-color: ${(props) => props.theme.bg};
 `;
 
 const Desc = styled.p`

@@ -12,10 +12,8 @@ import { device } from "../styles/Device";
 import styled, { css } from "styled-components";
 
 const Container = styled.div`
-  scroll-snap-type: y mandatory;
-
   > * {
-    scroll-snap-align: start;
+    overflow: hidden;
   }
 `;
 
