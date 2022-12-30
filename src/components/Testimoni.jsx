@@ -20,7 +20,11 @@ const Container = styled.div`
   }
 `;
 
-const Left = styled.div``;
+const Left = styled.div`
+  @media ${device.mobileS} {
+    transform: translateY(-5%);
+  }
+`;
 
 const TitleBox = styled.div`
   height: 325px;
@@ -35,8 +39,8 @@ const Title = styled.h1`
   color: ${(props) => props.theme.bg};
 
   @media ${device.mobileS} {
-    font-size: 60px;
-    line-height: 75px;
+    font-size: 50px;
+    line-height: 70px;
   }
   @media ${device.tablet} {
     font-size: 70px;
@@ -57,6 +61,7 @@ const Right = styled.div`
     align-items: flex-start;
     justify-content: center;
     gap: 30px;
+    transform: translateY(-5%);
   }
 
   @media ${device.tablet} {

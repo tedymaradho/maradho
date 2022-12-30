@@ -107,7 +107,7 @@ const TestiShape = styled.div`
 
   @media ${device.mobileS} {
     width: 100%;
-    height: 50%;
+    height: 45%;
   }
   @media ${device.tablet} {
     width: 45%;

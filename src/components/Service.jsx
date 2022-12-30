@@ -7,8 +7,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 35px;
-    padding-top: 20px;
+    gap: 55px;
   }
   @media ${device.tablet} {
     width: 100%;
@@ -62,6 +61,7 @@ const Desc = styled.p`
 
 const Right = styled.div`
   color: white;
+  line-height: 1.1;
 `;
 
 const List = styled.div`
