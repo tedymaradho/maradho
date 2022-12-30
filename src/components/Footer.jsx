@@ -69,7 +69,7 @@ const Right = styled.div`
 `;
 
 const Form = styled.form`
-  width: 400px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -86,6 +86,7 @@ const Input = styled.input`
   height: 35px;
   border-radius: 8px;
   border: none;
+  outline: none;
 `;
 
 const Area = styled.textarea`
@@ -96,6 +97,7 @@ const Area = styled.textarea`
   height: 180px;
   border-radius: 8px;
   border: none;
+  outline: none;
 `;
 
 const Dev = styled.p`

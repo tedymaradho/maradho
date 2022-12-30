@@ -15,7 +15,7 @@ const Left = styled.div``;
 const Title = styled.h1`
   line-height: 80px;
   color: ${(props) => props.theme.bg};
-  font-size: 60px;
+  font-size: 70px;
 `;
 
 const BgSpan = styled.span`
@@ -32,10 +32,6 @@ const TestiBox = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-
-  &:last-child {
-    transform: translateX(-10%);
-  }
 `;
 
 const TextBox = styled.div`

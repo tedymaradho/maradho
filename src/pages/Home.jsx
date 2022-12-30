@@ -51,7 +51,19 @@ const SectionClient = styled.div`
 
 const SectionService = styled.div`
   ${SectionDefault}
-  background-color: ${(props) => props.theme.main};
+  background-color: ${(props) => props.theme.bg};
+  position: relative;
+  z-index: -1;
+`;
+
+const ServiceShape = styled.div`
+  width: 55%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+  background-color: #51734e;
 `;
 
 const SectionProject = styled.div`
@@ -73,13 +85,12 @@ const SectionTestimoni = styled.div`
 `;
 
 const TestiShape = styled.div`
-  width: 100%;
+  width: 45%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -2;
-  clip-path: polygon(0% 0%, 54.75% 0%, 35.75% 100%, 0% 100%);
   background-color: #51734e;
 `;
 
@@ -109,6 +120,7 @@ function Home() {
         <Wrapper>
           <Service />
         </Wrapper>
+        <ServiceShape />
       </SectionService>
       <SectionProject>
         <Wrapper>

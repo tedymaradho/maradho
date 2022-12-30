@@ -5,7 +5,6 @@ const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   height: 100vh;
-  color: white;
 `;
 
 const Left = styled.div`
@@ -15,6 +14,7 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
+  color: ${(props) => props.theme.main};
   font-size: 60px;
   line-height: 80px;
 `;
@@ -29,7 +29,9 @@ const Desc = styled.p`
   margin-top: 35px;
 `;
 
-const Right = styled.div``;
+const Right = styled.div`
+  color: white;
+`;
 
 const List = styled.div`
   display: flex;
