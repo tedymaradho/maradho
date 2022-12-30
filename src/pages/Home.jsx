@@ -17,7 +17,13 @@ const Container = styled.div`
 `;
 
 const SectionDefault = css`
-  width: 100%;
+  @media ${device.mobileS} {
+    width: 100vw;
+  }
+  @media ${device.tablet} {
+    width: 100%;
+  }
+
   height: 650px;
 `;
 

@@ -111,10 +111,22 @@ const Email = styled.div`
 const Address = styled.div`
   display: flex;
   align-items: center;
+
+  @media ${device.mobileS} {
+    opacity: 0;
+  }
+  @media ${device.tablet} {
+    opacity: 100%;
+  }
 `;
 
 const Reserved = styled.p`
-  opacity: 50%;
+  @media ${device.mobileS} {
+    opacity: 0;
+  }
+  @media ${device.tablet} {
+    opacity: 50%;
+  }
 `;
 
 const Right = styled.div`
