@@ -4,7 +4,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 100vh;
+  height: 650px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;

@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-  height: 100vh;
+  height: 650px;
   padding: 30px 0;
   display: flex;
   flex-direction: column;
@@ -60,7 +60,7 @@ const Reserved = styled.p`
 `;
 
 const Right = styled.div`
-  height: 100vh;
+  height: 650px;
   padding: 150px 0 30px 0;
   display: flex;
   flex-direction: column;

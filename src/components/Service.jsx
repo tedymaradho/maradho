@@ -4,7 +4,7 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  height: 100vh;
+  height: 650px;
 `;
 
 const Left = styled.div`

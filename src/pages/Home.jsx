@@ -12,12 +12,13 @@ import styled, { css } from "styled-components";
 const Container = styled.div`
   > * {
     overflow: hidden;
+    background-color: white;
   }
 `;
 
 const SectionDefault = css`
   width: 100%;
-  height: 100vh;
+  height: 650px;
 `;
 
 const Wrapper = styled.div`
@@ -27,17 +28,17 @@ const Wrapper = styled.div`
 
 const SectionHeader = styled.div`
   ${SectionDefault}
-  background-color: ${(props) => props.theme.bg};
   position: relative;
-  z-index: -1;
+  background-color: transparent;
 `;
 
 const HeaderShape = styled.div`
-  width: 100%;
+  width: 85%;
   height: 100%;
   position: absolute;
   top: 0;
-  z-index: -2;
+  right: 0;
+  z-index: -1;
   clip-path: polygon(71% 0%, 100% 0%, 100% 100%, 45.25% 100%);
   background-color: #51734e;
 `;

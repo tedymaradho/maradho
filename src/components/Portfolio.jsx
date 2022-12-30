@@ -4,7 +4,7 @@ import { ButtonInverse } from "../styles/Button";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const Container = styled.div`
-  height: 100vh;
+  height: 650px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 `;
@@ -38,7 +38,7 @@ const Right = styled.div`
 `;
 
 const Image = styled.img`
-  height: 70vh;
+  height: 400px;
   box-shadow: 5px 35px 32px -30px rgba(81, 115, 78, 0.9);
 `;
 

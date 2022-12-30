@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 
 const Container = styled.div`
   width: 100%;
-  height: calc(100vh - 124px);
+  height: calc(650px - 124px);
   display: grid;
   grid-template-columns: 1fr 1fr;
 `;
