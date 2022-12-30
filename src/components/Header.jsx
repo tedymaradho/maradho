@@ -79,8 +79,13 @@ const Desc = styled.p`
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
+    @media ${device.mobileS} {
+      width: 100%;
+    }
+    @media ${device.tablet} {
+      width: 90%;
+    }
     opacity: 0.5;
     background-color: ${(props) => props.theme.bg};
     z-index: -1;
@@ -103,11 +108,12 @@ const Right = styled.div`
   background-image: url(${MyPhoto});
   background-repeat: no-repeat;
   @media ${device.mobileS} {
-    background-size: 300px 461px;
+    background-size: 56.7%;
     background-position: center 10%;
   }
   @media ${device.tablet} {
     background-size: 529px 690px;
+    background-position: -10% 10%;
   }
 `;
 
