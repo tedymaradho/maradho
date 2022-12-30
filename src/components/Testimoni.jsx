@@ -28,7 +28,7 @@ const TitleBox = styled.div`
   align-items: center;
   justify-content: flex-start;
   text-align: left;
-  padding: 0 84px;
+  padding: 0 32px;
 `;
 
 const Title = styled.h1`
