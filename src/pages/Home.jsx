@@ -92,13 +92,20 @@ const SectionTestimoni = styled.div`
 `;
 
 const TestiShape = styled.div`
-  width: 45%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -2;
   background-color: #51734e;
+
+  @media ${device.mobileS} {
+    width: 100%;
+    height: 50%;
+  }
+  @media ${device.tablet} {
+    width: 45%;
+    height: 100%;
+  }
 `;
 
 const SectionSosmed = styled(SectionClient)``;
