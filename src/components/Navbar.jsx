@@ -116,7 +116,7 @@ const DropdownMenu = styled.div`
   top: 0;
   right: 0;
   background-color: white;
-  opacity: 0.95;
+  opacity: 0.99;
 
   @media ${device.mobileS} {
     display: inline-block;

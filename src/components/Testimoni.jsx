@@ -171,7 +171,7 @@ function Testimoni() {
               support in the form of solutions and good ideas, I was greatly
               helped while being his client.
             </Text>
-            <Owner>Ahamad Dawam - Manager at Bluder Tunjungan</Owner>
+            <Owner>Ahmad Dawam - Manager at Bluder Tunjungan</Owner>
           </TextBox>
         </TestiBox>
         <TestiBox>

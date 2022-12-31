@@ -92,7 +92,7 @@ const LogoName = styled.span`
 
 const Title = styled.h1`
   @media ${device.mobileS} {
-    font-size: 50px;
+    font-size: 45px;
     line-height: 70px;
   }
   @media ${device.tablet} {
@@ -109,14 +109,12 @@ const Email = styled.div`
 `;
 
 const Address = styled.div`
-  display: flex;
-  align-items: center;
-
   @media ${device.mobileS} {
-    opacity: 0;
+    display: none;
   }
   @media ${device.tablet} {
-    opacity: 100%;
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -183,7 +181,7 @@ const Area = styled.textarea`
   outline: none;
 
   @media ${device.mobileS} {
-    height: 90px;
+    height: 130px;
     padding: 5px;
     font-size: 14px;
   }
