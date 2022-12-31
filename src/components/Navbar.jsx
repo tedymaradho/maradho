@@ -65,6 +65,8 @@ const Navlink = styled.div`
 `;
 
 const ButtonLink = styled(ButtonInverseSmall)`
+  text-decoration: none;
+
   @media ${device.mobileS} {
     background-color: transparent;
     z-index: 3;
@@ -141,12 +143,19 @@ function Navbar() {
         <LogoName>Maradho</LogoName>
       </LogoBox>
       <Navlink dropdownOpen={dropdownOpen}>
-        <ButtonLink>Home</ButtonLink>
-        <ButtonLink>Services</ButtonLink>
-        <ButtonLink>Portfolio</ButtonLink>
-        <ButtonLink>Testimonials</ButtonLink>
+        <ButtonLink as="a" href="#service">
+          Services
+        </ButtonLink>
+        <ButtonLink as="a" href="#portfolio">
+          Portfolio
+        </ButtonLink>
+        <ButtonLink as="a" href="#testimonial">
+          Testimonials
+        </ButtonLink>
         <ButtonLink>Tools</ButtonLink>
-        <ButtonLink>Contact</ButtonLink>
+        <ButtonLink as="a" href="#footer">
+          Contact
+        </ButtonLink>
       </Navlink>
       <MenuIcon size="2.5em" onClick={dropdownToggleHandler} />
       {dropdownOpen && (

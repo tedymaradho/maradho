@@ -7,6 +7,7 @@ import Portfolio from "../components/Portfolio";
 import Testimoni from "../components/Testimoni";
 import Footer from "../components/Footer";
 import { device } from "../styles/Device";
+import { AiFillHome } from "react-icons/ai";
 import styled, { css } from "styled-components";
 
 const Container = styled.div`
@@ -15,7 +16,6 @@ const Container = styled.div`
   box-shadow: 0 0 20px rgba(81, 115, 78, 0.9);
 
   > * {
-    overflow: hidden;
     background-color: white;
   }
 `;
@@ -135,6 +135,30 @@ const SectionFoot = styled.div`
   background-color: ${(props) => props.theme.main};
 `;
 
+const HomeIcon = styled(AiFillHome)`
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  cursor: pointer;
+  color: ${(props) => props.theme.main};
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 0 20px rgba(81, 115, 78, 0.9);
+`;
+
+const HomeLink = styled.a`
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  background-color: red;
+  z-index: 4;
+  cursor: pointer;
+  background-color: transparent;
+`;
+
 function Home() {
   return (
     <Container>
@@ -150,18 +174,18 @@ function Home() {
           <Client />
         </Wrapper>
       </SectionClient>
-      <SectionService>
+      <SectionService id="service">
         <Wrapper>
           <Service />
         </Wrapper>
         <ServiceShape />
       </SectionService>
-      <SectionPortfolio>
+      <SectionPortfolio id="portfolio">
         <Wrapper>
           <Portfolio />
         </Wrapper>
       </SectionPortfolio>
-      <SectionTestimoni>
+      <SectionTestimoni id="testimonial">
         <Wrapper>
           <Testimoni />
         </Wrapper>
@@ -172,11 +196,13 @@ function Home() {
           <Sosmed />
         </Wrapper>
       </SectionSosmed>
-      <SectionFoot>
+      <SectionFoot id="footer">
         <Wrapper>
           <Footer />
         </Wrapper>
       </SectionFoot>
+      <HomeIcon size="3em" />
+      <HomeLink href="#" />
     </Container>
   );
 }

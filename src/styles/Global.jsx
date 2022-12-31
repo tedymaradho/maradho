@@ -9,11 +9,14 @@ export const GlobalStyle = createGlobalStyle`
 
 html {
   background-color: ${(props) => props.theme.bg}; 
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   color: ${(props) => props.theme.text};
+  overflow-x: hidden;
 }
 
 button {
