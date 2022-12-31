@@ -45,7 +45,6 @@ const TitleBox = styled.div`
 const Title = styled.h1`
   width: 100%;
   color: ${(props) => props.theme.bg};
-  background-color: yellow;
 
   @media ${device.mobileS} {
     font-size: 45px;
