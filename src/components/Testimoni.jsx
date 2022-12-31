@@ -25,7 +25,7 @@ const Container = styled.div`
 const Left = styled.div`
   height: 100%;
   @media ${device.mobileS} {
-    width: 50vw;
+    width: 100vw;
     transform: translateY(-5%);
   }
   @media ${device.tablet} {
@@ -43,11 +43,13 @@ const TitleBox = styled.div`
 `;
 
 const Title = styled.h1`
+  width: 100%;
   color: ${(props) => props.theme.bg};
+  background-color: yellow;
 
   @media ${device.mobileS} {
-    font-size: 50px;
-    line-height: 70px;
+    font-size: 45px;
+    line-height: 60px;
   }
   @media ${device.tablet} {
     font-size: 70px;
@@ -65,12 +67,10 @@ const Right = styled.div`
 
   @media ${device.mobileS} {
     gap: 30px;
-    transform: translateY(-5%);
   }
 
   @media ${device.tablet} {
     gap: 60px;
-    transform: translateY(0);
   }
 `;
 
