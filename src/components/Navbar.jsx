@@ -60,7 +60,8 @@ const Navlink = styled.div`
     margin-top: 0;
   }
 
-  gap: 10px;
+  gap: 18px;
+  transition: all 0.5s;
 `;
 
 const ButtonLink = styled(ButtonInverseSmall)`
@@ -76,6 +77,7 @@ const ButtonLink = styled(ButtonInverseSmall)`
 const MenuIcon = styled(FcMenu)`
   padding: 7px;
   background-color: ${(props) => props.theme.bg};
+  color: ${(props) => props.theme.main};
   border-radius: 50%;
 
   @media ${device.mobileS} {
@@ -93,6 +95,7 @@ const MenuIcon = styled(FcMenu)`
 const CloseIcon = styled(AiOutlineClose)`
   padding: 7px;
   background-color: white;
+  color: ${(props) => props.theme.main};
   border-radius: 50%;
   z-index: 3;
 
