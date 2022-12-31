@@ -89,7 +89,7 @@ const Number = styled.h1`
   opacity: 10%;
 
   @media ${device.mobileS} {
-    font-size: 85px;
+    font-size: 79px;
   }
   @media ${device.tablet} {
     font-size: 135px;
