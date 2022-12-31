@@ -15,7 +15,7 @@ const Container = styled.div`
     gap: 60px;
   }
   @media ${device.tablet} {
-    width: 100%;
+    max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -33,6 +33,7 @@ const Left = styled.div`
   }
 
   @media ${device.tablet} {
+    align-items: start;
     text-align: left;
   }
 

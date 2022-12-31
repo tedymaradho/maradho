@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 html {
-  background-color: ${(props) => props.theme.bg};;
+  background-color: ${(props) => props.theme.bg}; 
 }
 
 body {

@@ -5,34 +5,41 @@ import { device } from "../styles/Device";
 import styled from "styled-components";
 
 const Container = styled.div`
+  height: 100%;
+
   @media ${device.mobileS} {
     width: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 0 30px;
+    gap: 80px;
+    padding: 55px;
   }
   @media ${device.tablet} {
     width: 100%;
-    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    text-align: left;
+    gap: 0;
   }
 `;
 
 const Left = styled.div`
+  height: 100%;
   @media ${device.mobileS} {
+    width: 50vw;
     transform: translateY(-5%);
+  }
+  @media ${device.tablet} {
+    width: 100%;
+    transform: translateY(0);
+    transform: translateX(-10%);
   }
 `;
 
 const TitleBox = styled.div`
-  height: 325px;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  text-align: left;
-  padding: 0 30px;
 `;
 
 const Title = styled.h1`
@@ -54,18 +61,16 @@ const BgSpan = styled.span`
 
 const Right = styled.div`
   display: flex;
+  flex-direction: column;
 
   @media ${device.mobileS} {
-    height: 325px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
     gap: 30px;
     transform: translateY(-5%);
   }
 
   @media ${device.tablet} {
     gap: 60px;
+    transform: translateY(0);
   }
 `;
 

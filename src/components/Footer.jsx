@@ -77,6 +77,7 @@ const Left = styled.div`
 const LogoBox = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
 `;
 
@@ -92,6 +93,7 @@ const LogoName = styled.span`
 
 const Title = styled.h1`
   @media ${device.mobileS} {
+    text-align: center;
     font-size: 45px;
     line-height: 70px;
   }

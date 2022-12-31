@@ -10,6 +10,10 @@ import { device } from "../styles/Device";
 import styled, { css } from "styled-components";
 
 const Container = styled.div`
+  max-width: 1366px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(81, 115, 78, 0.9);
+
   > * {
     overflow: hidden;
     background-color: white;
@@ -88,7 +92,7 @@ const ServiceShape = styled.div`
   }
 `;
 
-const SectionProject = styled.div`
+const SectionPortfolio = styled.div`
   ${SectionDefault}
 `;
 
@@ -96,8 +100,11 @@ const SectionTestimoni = styled.div`
   ${SectionDefault}
   background-color: transparent;
   position: relative;
-
+  @media ${device.mobileS} {
+    width: 100vw;
+  }
   @media ${device.tablet} {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -149,11 +156,11 @@ function Home() {
         </Wrapper>
         <ServiceShape />
       </SectionService>
-      <SectionProject>
+      <SectionPortfolio>
         <Wrapper>
           <Portfolio />
         </Wrapper>
-      </SectionProject>
+      </SectionPortfolio>
       <SectionTestimoni>
         <Wrapper>
           <Testimoni />
