@@ -66,6 +66,7 @@ const Navlink = styled.div`
 
 const ButtonLink = styled(ButtonInverseSmall)`
   text-decoration: none;
+  font-size: 12px;
 
   @media ${device.mobileS} {
     background-color: transparent;
