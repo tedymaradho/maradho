@@ -3,6 +3,7 @@ import { ButtonInverse } from "../styles/Button";
 import { BsArrowUpRight } from "react-icons/bs";
 import { device } from "../styles/Device";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   height: 650px;
@@ -60,6 +61,10 @@ const Title = styled.h1`
   }
 `;
 
+const ButtonLink = styled(ButtonInverse)`
+  border: 1px solid ${(props) => props.theme.main}; ;
+`;
+
 const Right = styled.div`
   display: flex;
   align-items: center;
@@ -86,6 +91,10 @@ const Image = styled.img`
 `;
 
 function Portfolio() {
+  const Navigate = useNavigate();
+
+  const ToPortfolioHandler = () => Navigate("/portfolio");
+
   return (
     <Container>
       <Left>
@@ -95,10 +104,10 @@ function Portfolio() {
           <br />
           Design & Build
         </Title>
-        <ButtonInverse>
+        <ButtonLink as="a" href="#" onClick={ToPortfolioHandler}>
           See this project&nbsp;
           <BsArrowUpRight />
-        </ButtonInverse>
+        </ButtonLink>
       </Left>
       <Right>
         <Image src={FirstPortfolio} alt="First Portfolio" />

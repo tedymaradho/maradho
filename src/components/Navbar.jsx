@@ -3,8 +3,9 @@ import { ButtonInverseSmall } from "../styles/Button";
 import { device } from "../styles/Device";
 import { FcMenu } from "react-icons/fc";
 import { AiOutlineClose } from "react-icons/ai";
-import styled from "styled-components";
 import { useState } from "react";
+import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   height: 124px;
@@ -46,7 +47,7 @@ const Navlink = styled.div`
   @media ${device.mobileS} {
     flex-direction: column;
     position: absolute;
-    top: ${(props) => props.dropdownOpen && "10%"};
+    top: ${(props) => props.dropdownOpen && "65px"};
     left: ${(props) => (props.dropdownOpen ? "50%" : "150%")};
     transform: translateX(-50%);
     z-index: 3;
@@ -135,26 +136,31 @@ const DropdownMenu = styled.div`
 function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  const Navigate = useNavigate();
+
   const dropdownToggleHandler = () => setDropdownOpen(!dropdownOpen);
 
   return (
     <Container>
-      <LogoBox>
+      <LogoBox onClick={() => Navigate("/")}>
         <LogoImage src={Logo} alt="Logo Maradho" />
         <LogoName>Maradho</LogoName>
       </LogoBox>
       <Navlink dropdownOpen={dropdownOpen}>
-        <ButtonLink as="a" href="#service">
+        <ButtonLink as="a" href="#" onClick={() => Navigate("/")}>
+          Home
+        </ButtonLink>
+        <ButtonLink as="a" href="#service" onClick={() => Navigate("/")}>
           Services
         </ButtonLink>
-        <ButtonLink as="a" href="#portfolio">
+        <ButtonLink as="a" href="#portfolio" onClick={() => Navigate("/")}>
           Portfolio
         </ButtonLink>
-        <ButtonLink as="a" href="#testimonial">
+        <ButtonLink as="a" href="#testimonial" onClick={() => Navigate("/")}>
           Testimonials
         </ButtonLink>
         <ButtonLink>Tools</ButtonLink>
-        <ButtonLink as="a" href="#footer">
+        <ButtonLink as="a" href="#contact">
           Contact
         </ButtonLink>
       </Navlink>

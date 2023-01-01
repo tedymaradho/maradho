@@ -27,6 +27,7 @@ const Left = styled.div`
   @media ${device.mobileS} {
     width: 100vw;
     transform: translateY(-5%);
+    transform: translateX(12px);
   }
   @media ${device.tablet} {
     width: 100%;

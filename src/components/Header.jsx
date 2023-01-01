@@ -1,6 +1,5 @@
 import MyPhoto from "../assets/me.png";
-import { ButtonInverse, ButtonPrimary } from "../styles/Button";
-import { BsArrowUpRight } from "react-icons/bs";
+import { ButtonPrimary } from "../styles/Button";
 import { FiSend } from "react-icons/fi";
 import { init } from "ityped";
 import { device } from "../styles/Device";
@@ -143,14 +142,10 @@ function Header() {
           website.
         </Desc>
         <ButtonBox>
-          <ButtonPrimary>
+          <ButtonPrimary href="#footer">
             Let's Discuss&nbsp;
             <FiSend />
           </ButtonPrimary>
-          <ButtonInverse>
-            Portfolio&nbsp;
-            <BsArrowUpRight />
-          </ButtonInverse>
         </ButtonBox>
       </Left>
       <Right></Right>

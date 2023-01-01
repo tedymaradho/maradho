@@ -33,6 +33,7 @@ const Link = styled.a`
   opacity: 70%;
   display: flex;
   align-items: center;
+  color: gray;
 
   &:hover {
     opacity: 100%;
@@ -44,16 +45,22 @@ function Sosmed() {
     <Container>
       Check out my
       <Wrapper>
-        <Link>
+        <Link href="https://www.instagram.com/maradhopasa/" target="_blank">
           <BsInstagram size="1.5em" />
         </Link>
-        <Link>
+        <Link
+          href="https://www.linkedin.com/in/tedy-maradho-pasa-220731233/"
+          target="_blank"
+        >
           <BsLinkedin size="1.5em" />
         </Link>
-        <Link>
+        <Link
+          href="https://www.youtube.com/channel/UCaWfnzdzI9T4nGRq1TR_fMg"
+          target="_blank"
+        >
           <BsYoutube size="2.1em" />
         </Link>
-        <Link>
+        <Link href="https://github.com/tedymaradho" target="_blank">
           <BsGithub size="1.8em" />
         </Link>
       </Wrapper>

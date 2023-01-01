@@ -21,6 +21,11 @@ const Container = styled.div`
   }
 `;
 
+const Wrapper = styled.div`
+  width: 1085px;
+  margin: 0 auto;
+`;
+
 const SectionDefault = css`
   @media ${device.mobileS} {
     width: 100vw;
@@ -30,11 +35,6 @@ const SectionDefault = css`
   }
 
   height: 650px;
-`;
-
-const Wrapper = styled.div`
-  width: 1085px;
-  margin: 0 auto;
 `;
 
 const SectionHeader = styled.div`
@@ -138,13 +138,18 @@ const SectionFoot = styled.div`
 
 const HomeIcon = styled(AiFillHome)`
   position: fixed;
-  bottom: 10px;
-  right: 5px;
+  bottom: 50px;
+  @media ${device.mobileS} {
+    right: 5px;
+  }
+  @media ${device.tablet} {
+    right: 10px;
+  }
   cursor: pointer;
   color: ${(props) => props.theme.main};
   border-radius: 50%;
   padding: 5px;
-  box-shadow: 0 0 32px --5px rgba(81, 115, 78, 0.9);
+  box-shadow: 0 0 20px -15px rgba(81, 115, 78, 1);
   opacity: 0.7;
 `;
 
@@ -153,8 +158,13 @@ const HomeLink = styled.a`
   width: 40px;
   height: 40px;
   position: fixed;
-  bottom: 10px;
-  right: 5px;
+  bottom: 50px;
+  @media ${device.mobileS} {
+    right: 5px;
+  }
+  @media ${device.tablet} {
+    right: 10px;
+  }
   z-index: 4;
   cursor: pointer;
   border-radius: 50%;
@@ -197,7 +207,7 @@ function Home() {
         </Wrapper>
         <TestiShape />
       </SectionTestimoni>
-      <SectionSosmed>
+      <SectionSosmed id="contact">
         <Wrapper>
           <Sosmed />
         </Wrapper>
