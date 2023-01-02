@@ -9,7 +9,7 @@ import styled from "styled-components";
 const Container = styled.div`
   height: calc(650px - 124px);
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -27,7 +27,7 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     text-align: center;
   }
   @media ${device.tablet} {
@@ -41,7 +41,7 @@ const Title = styled.h1`
   margin-bottom: 20px;
   color: ${(props) => props.theme.main};
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     font-size: 50px;
   }
   @media ${device.tablet} {
@@ -79,12 +79,14 @@ const Desc = styled.p`
     top: 0;
     left: 0;
     height: 100%;
-    @media ${device.mobileL} {
+
+    @media ${device.mobileL}, ${device.mobileS} {
       width: 100%;
     }
     @media ${device.tablet} {
       width: 90%;
     }
+
     opacity: 0.6;
     background-color: ${(props) => props.theme.bg};
     z-index: -1;
@@ -93,7 +95,8 @@ const Desc = styled.p`
 
 const ButtonBox = styled.div`
   gap: 33px;
-  @media ${device.mobileL} {
+
+  @media ${device.mobileL}, ${device.mobileS} {
     display: none;
   }
   @media ${device.tablet} {
@@ -106,7 +109,8 @@ const Right = styled.div`
   height: 100%;
   background-image: url(${MyPhoto});
   background-repeat: no-repeat;
-  @media ${device.mobileL} {
+
+  @media ${device.mobileL}, ${device.mobileS} {
     background-size: 56.7%;
     background-position: center 10%;
   }

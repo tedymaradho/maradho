@@ -27,7 +27,7 @@ const Wrapper = styled.div`
 `;
 
 const SectionDefault = css`
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 100vw;
   }
   @media ${device.tablet} {
@@ -51,7 +51,7 @@ const HeaderShape = styled.div`
   right: 0;
   z-index: -1;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     clip-path: polygon(81.75% 57.3%, 100% 57.3%, 100% 100%, 9.25% 100%);
   }
   @media ${device.tablet} {
@@ -83,7 +83,7 @@ const ServiceShape = styled.div`
   z-index: -2;
   background-color: #51734e;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 100%;
     top: 50%;
   }
@@ -101,7 +101,8 @@ const SectionTestimoni = styled.div`
   ${SectionDefault}
   background-color: transparent;
   position: relative;
-  @media ${device.mobileL} {
+
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 100vw;
   }
   @media ${device.tablet} {
@@ -119,7 +120,7 @@ const TestiShape = styled.div`
   z-index: -2;
   background-color: #51734e;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 100%;
     height: 45%;
   }
@@ -139,12 +140,14 @@ const SectionFoot = styled.div`
 const HomeIcon = styled(AiFillHome)`
   position: fixed;
   bottom: 50px;
-  @media ${device.mobileL} {
+
+  @media ${device.mobileL}, ${device.mobileS} {
     right: 5px;
   }
   @media ${device.tablet} {
     right: 10px;
   }
+
   cursor: pointer;
   color: ${(props) => props.theme.main};
   border-radius: 50%;
@@ -159,12 +162,14 @@ const HomeLink = styled.a`
   height: 40px;
   position: fixed;
   bottom: 50px;
-  @media ${device.mobileL} {
+
+  @media ${device.mobileL}, ${device.mobileS} {
     right: 5px;
   }
   @media ${device.tablet} {
     right: 10px;
   }
+
   z-index: 4;
   cursor: pointer;
   border-radius: 50%;

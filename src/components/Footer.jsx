@@ -18,7 +18,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 100vh;
     flex-direction: column;
     align-items: center;
@@ -33,7 +33,7 @@ const Wrapper = styled.div`
   &:first-child {
     gap: 30px;
 
-    @media ${device.mobileL} {
+    @media ${device.mobileL}, ${device.mobileS} {
       width: 100vw;
     }
     @media ${device.tablet} {
@@ -42,7 +42,7 @@ const Wrapper = styled.div`
   }
 
   &:last-child {
-    @media ${device.mobileL} {
+    @media ${device.mobileL}, ${device.mobileS} {
       width: 100vw;
       display: flex;
       flex-direction: column;
@@ -62,7 +62,7 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     align-items: center;
     width: 100vh;
     gap: 10px;
@@ -92,7 +92,7 @@ const LogoName = styled.span`
 `;
 
 const Title = styled.h1`
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     text-align: center;
     font-size: 45px;
     line-height: 70px;
@@ -111,7 +111,7 @@ const Email = styled.div`
 `;
 
 const Address = styled.div`
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     display: none;
   }
   @media ${device.tablet} {
@@ -121,7 +121,7 @@ const Address = styled.div`
 `;
 
 const Reserved = styled.p`
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     opacity: 0;
   }
   @media ${device.tablet} {
@@ -131,7 +131,7 @@ const Reserved = styled.p`
 
 const Right = styled.div`
   display: flex;
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 100vh;
     justify-content: center;
   }
@@ -147,7 +147,7 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 350px;
     gap: 10px;
   }
@@ -159,7 +159,7 @@ const Form = styled.form`
 const Input = styled.input`
   background-color: ${(props) => props.theme.bg};
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     font-size: 14px;
     height: 30px;
   }
@@ -182,7 +182,7 @@ const Area = styled.textarea`
   border: none;
   outline: none;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     height: 130px;
     padding: 5px;
     font-size: 14px;
@@ -196,7 +196,8 @@ const Area = styled.textarea`
 
 const ButtonMessage = styled(ButtonInverse)`
   width: fit-content;
-  @media ${device.mobileL} {
+
+  @media ${device.mobileL}, ${device.mobileS} {
     font-size: 12px;
     margin: 0 auto;
   }

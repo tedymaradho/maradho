@@ -7,7 +7,7 @@ import styled from "styled-components";
 const Container = styled.div`
   height: 100%;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 100vh;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,8 @@ const Container = styled.div`
 
 const Left = styled.div`
   height: 100%;
-  @media ${device.mobileL} {
+
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 100vw;
     transform: translateY(-5%);
     transform: translateX(12px);
@@ -47,7 +48,7 @@ const Title = styled.h1`
   width: 100%;
   color: ${(props) => props.theme.bg};
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     font-size: 45px;
     line-height: 60px;
   }
@@ -65,7 +66,7 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     gap: 30px;
   }
 
@@ -79,7 +80,7 @@ const TestiBox = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 80vw;
     gap: 10px;
   }
@@ -94,7 +95,7 @@ const TestiBox = styled.div`
 const QuoteIcon = styled(FaQuoteLeft)`
   color: lightgray;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     size: 1em;
   }
   @media ${device.tablet} {
@@ -105,10 +106,9 @@ const QuoteIcon = styled(FaQuoteLeft)`
 const TextBox = styled.div`
   display: flex;
   flex-direction: column;
-
   opacity: 80%;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     align-items: flex-start;
     text-align: left;
     width: 100vw;
@@ -121,7 +121,7 @@ const TextBox = styled.div`
 `;
 
 const Photo = styled.img`
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 80px;
     height: 80px;
   }
@@ -132,7 +132,7 @@ const Photo = styled.img`
 `;
 
 const Text = styled.p`
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     font-size: 12px;
     line-height: 20px;
   }
@@ -144,7 +144,8 @@ const Text = styled.p`
 
 const Owner = styled.span`
   color: ${(props) => props.theme.main};
-  @media ${device.mobileL} {
+
+  @media ${device.mobileL}, ${device.mobileS} {
     font-size: 9px;
   }
   @media ${device.tablet} {

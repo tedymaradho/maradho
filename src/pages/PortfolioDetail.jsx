@@ -22,7 +22,7 @@ const Wrapper = styled.div`
 `;
 
 const SectionDefault = css`
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 100vw;
   }
   @media ${device.tablet} {
@@ -51,7 +51,7 @@ const SectionDesign = styled.div`
 const Title = styled.h1`
   color: ${(props) => props.theme.main};
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     font-size: 50px;
     line-height: 60px;
   }
@@ -66,7 +66,7 @@ const Desc = styled.p`
   line-height: 30px;
   margin: 20px;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     font-size: 14px;
     width: 90%;
   }
@@ -77,7 +77,7 @@ const Desc = styled.p`
 `;
 
 const ImageDesign = styled.img`
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     height: 1000px;
   }
   @media ${device.tablet} {

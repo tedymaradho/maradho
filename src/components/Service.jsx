@@ -2,7 +2,7 @@ import { device } from "../styles/Device";
 import styled from "styled-components";
 
 const Container = styled.div`
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     text-align: center;
   }
   @media ${device.tablet} {
@@ -35,7 +35,7 @@ const Left = styled.div`
 const Title = styled.h1`
   color: ${(props) => props.theme.main};
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     font-size: 50px;
     line-height: 60px;
   }
@@ -68,7 +68,7 @@ const List = styled.div`
   display: flex;
   align-items: center;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     gap: 20px;
 
     &:first-child {
@@ -88,7 +88,7 @@ const Number = styled.h1`
   font-weight: 300;
   opacity: 10%;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     font-size: 79px;
   }
   @media ${device.tablet} {
@@ -100,7 +100,7 @@ const Text = styled.h1`
   opacity: 70%;
   font-weight: 300;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileL}, ${device.mobileS} {
     font-size: 30px;
   }
   @media ${device.tablet} {
