@@ -12,11 +12,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Routes>
-          <Route path="/">
-            <Route index element={<Home />} />
-            <Route path="portfolio" element={<PortfolioDetail />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
+          <Route index element={<Home />} />
+          <Route path="portfolio" element={<PortfolioDetail />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </ThemeProvider>
     </BrowserRouter>
