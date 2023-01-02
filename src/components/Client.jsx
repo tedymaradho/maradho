@@ -4,7 +4,7 @@ import { device } from "../styles/Device";
 import styled from "styled-components";
 
 const Container = styled.div`
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -25,7 +25,7 @@ const LogoBox = styled.div`
 `;
 
 const LogoBT = styled.img`
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     height: 70px;
   }
   @media ${device.tablet} {
@@ -38,7 +38,7 @@ const LogoBT = styled.img`
 `;
 
 const LogoLTS = styled.img`
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     height: 85px;
   }
   @media ${device.tablet} {

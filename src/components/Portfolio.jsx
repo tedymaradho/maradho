@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Container = styled.div`
   height: 650px;
 
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@ const Left = styled.div`
   justify-content: center;
   opacity: 80%;
 
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     align-items: center;
     text-align: center;
   }
@@ -52,7 +52,7 @@ const Title = styled.h1`
   font-size: 40px;
   color: ${(props) => props.theme.main};
 
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     margin-bottom: 20px;
   }
 
@@ -69,7 +69,7 @@ const Right = styled.div`
   display: flex;
   align-items: center;
 
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     order: -1;
     justify-content: center;
   }
@@ -80,7 +80,7 @@ const Right = styled.div`
 `;
 
 const Image = styled.img`
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     height: 240px;
   }
   @media ${device.tablet} {

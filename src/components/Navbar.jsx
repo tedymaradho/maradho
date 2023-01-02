@@ -12,7 +12,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
 
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     width: 100vw;
     padding: 0 10px;
   }
@@ -44,7 +44,7 @@ const LogoName = styled.span`
 const Navlink = styled.div`
   display: flex;
 
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     flex-direction: column;
     position: absolute;
     top: ${(props) => props.dropdownOpen && "65px"};
@@ -69,7 +69,7 @@ const ButtonLink = styled(ButtonInverseSmall)`
   text-decoration: none;
   font-size: 12px;
 
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     background-color: transparent;
     z-index: 3;
   }
@@ -84,7 +84,7 @@ const MenuIcon = styled(FcMenu)`
   color: ${(props) => props.theme.main};
   border-radius: 50%;
 
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     display: inline-block;
   }
   @media ${device.tablet} {
@@ -103,7 +103,7 @@ const CloseIcon = styled(AiOutlineClose)`
   border-radius: 50%;
   z-index: 3;
 
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     display: inline-block;
   }
   @media ${device.tablet} {
@@ -123,9 +123,9 @@ const DropdownMenu = styled.div`
   top: 0;
   right: 0;
   background-color: white;
-  opacity: 0.97;
+  opacity: 0.98;
 
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     display: inline-block;
   }
   @media ${device.tablet} {

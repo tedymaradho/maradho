@@ -7,7 +7,7 @@ const Container = styled.div`
   align-items: center;
   gap: 30px;
 
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     flex-direction: column;
     justify-content: center;
   }
@@ -20,7 +20,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
 
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     gap: 50px;
   }
   @media ${device.tablet} {
