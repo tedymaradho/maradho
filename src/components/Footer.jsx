@@ -18,12 +18,12 @@ const Container = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 100vh;
     flex-direction: column;
     align-items: center;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100%;
     flex-direction: row;
     align-items: flex-start;
@@ -33,22 +33,22 @@ const Wrapper = styled.div`
   &:first-child {
     gap: 30px;
 
-    @media ${device.mobileL}, ${device.mobileS} {
+    @media ${device.mobileS} {
       width: 100vw;
     }
-    @media ${device.tablet} {
+    @media ${device.laptop} {
       width: 100%;
     }
   }
 
   &:last-child {
-    @media ${device.mobileL}, ${device.mobileS} {
+    @media ${device.mobileS} {
       width: 100vw;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
     }
-    @media ${device.tablet} {
+    @media ${device.laptop} {
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -62,12 +62,12 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     align-items: center;
     width: 100vh;
     gap: 10px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     align-items: flex-start;
     width: 100%;
     gap: 20px;
@@ -92,12 +92,12 @@ const LogoName = styled.span`
 `;
 
 const Title = styled.h1`
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     text-align: center;
     font-size: 45px;
     line-height: 70px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 60px;
     line-height: 80px;
   }
@@ -111,31 +111,31 @@ const Email = styled.div`
 `;
 
 const Address = styled.div`
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     display: none;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     display: flex;
     align-items: center;
   }
 `;
 
 const Reserved = styled.p`
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     opacity: 0;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     opacity: 50%;
   }
 `;
 
 const Right = styled.div`
   display: flex;
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 100vh;
     justify-content: center;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100%;
     height: 550px;
     justify-content: flex-end;
@@ -147,11 +147,11 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 350px;
     gap: 10px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     gap: 20px;
   }
 `;
@@ -159,11 +159,11 @@ const Form = styled.form`
 const Input = styled.input`
   background-color: ${(props) => props.theme.bg};
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     font-size: 14px;
     height: 30px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 16px;
     height: 35px;
   }
@@ -182,12 +182,12 @@ const Area = styled.textarea`
   border: none;
   outline: none;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     height: 130px;
     padding: 5px;
     font-size: 14px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     height: 180px;
     padding: 10px;
     font-size: 16px;
@@ -197,11 +197,11 @@ const Area = styled.textarea`
 const ButtonMessage = styled(ButtonInverse)`
   width: fit-content;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     font-size: 12px;
     margin: 0 auto;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 14px;
     margin: 0;
   }

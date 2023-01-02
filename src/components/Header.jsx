@@ -9,12 +9,12 @@ import styled from "styled-components";
 const Container = styled.div`
   height: calc(650px - 124px);
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 100vw;
     display: flex;
     flex-direction: column;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -27,10 +27,10 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     text-align: center;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     text-align: left;
   }
 `;
@@ -41,10 +41,10 @@ const Title = styled.h1`
   margin-bottom: 20px;
   color: ${(props) => props.theme.main};
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     font-size: 50px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 70px;
   }
 `;
@@ -80,10 +80,10 @@ const Desc = styled.p`
     left: 0;
     height: 100%;
 
-    @media ${device.mobileL}, ${device.mobileS} {
+    @media ${device.mobileS} {
       width: 100%;
     }
-    @media ${device.tablet} {
+    @media ${device.laptop} {
       width: 90%;
     }
 
@@ -96,10 +96,10 @@ const Desc = styled.p`
 const ButtonBox = styled.div`
   gap: 33px;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     display: none;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     display: flex;
   }
 `;
@@ -110,11 +110,11 @@ const Right = styled.div`
   background-image: url(${MyPhoto});
   background-repeat: no-repeat;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     background-size: 56.7%;
     background-position: center 10%;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     background-size: 529px 690px;
     background-position: -10% 10%;
   }

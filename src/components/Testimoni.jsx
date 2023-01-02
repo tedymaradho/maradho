@@ -7,33 +7,28 @@ import styled from "styled-components";
 const Container = styled.div`
   height: 100%;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 80px;
-    padding: 55px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
   }
 `;
 
 const Left = styled.div`
-  height: 100%;
-
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
+    height: 325px;
     width: 100vw;
-    transform: translateY(-5%);
-    transform: translateX(12px);
+    text-align: center;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
+    height: 100%;
     width: 100%;
-    transform: translateY(0);
-    transform: translateX(-10%);
+    text-align: left;
   }
 `;
 
@@ -48,11 +43,11 @@ const Title = styled.h1`
   width: 100%;
   color: ${(props) => props.theme.bg};
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     font-size: 45px;
     line-height: 60px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 70px;
     line-height: 80px;
   }
@@ -65,12 +60,17 @@ const BgSpan = styled.span`
 const Right = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
+    width: 100vw;
+    height: 325px;
     gap: 30px;
   }
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
+    width: 100%;
+    height: 100%;
     gap: 60px;
   }
 `;
@@ -80,12 +80,12 @@ const TestiBox = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 80vw;
     gap: 10px;
   }
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100%;
     flex-direction: row;
     gap: 20px;
@@ -95,10 +95,10 @@ const TestiBox = styled.div`
 const QuoteIcon = styled(FaQuoteLeft)`
   color: lightgray;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     size: 1em;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     size: 1.5em;
   }
 `;
@@ -108,35 +108,35 @@ const TextBox = styled.div`
   flex-direction: column;
   opacity: 80%;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     align-items: flex-start;
     text-align: left;
     width: 100vw;
     gap: 10px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100%;
     gap: 20px;
   }
 `;
 
 const Photo = styled.img`
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 80px;
     height: 80px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 150px;
     height: 150px;
   }
 `;
 
 const Text = styled.p`
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     font-size: 12px;
     line-height: 20px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 14px;
     line-height: 24px;
   }
@@ -145,10 +145,10 @@ const Text = styled.p`
 const Owner = styled.span`
   color: ${(props) => props.theme.main};
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     font-size: 9px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 10px;
   }
 `;

@@ -12,11 +12,11 @@ const Container = styled.div`
   display: flex;
   align-items: center;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 100vw;
     padding: 0 10px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100%;
     padding: 0;
   }
@@ -44,7 +44,7 @@ const LogoName = styled.span`
 const Navlink = styled.div`
   display: flex;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     flex-direction: column;
     position: absolute;
     top: ${(props) => props.dropdownOpen && "65px"};
@@ -52,7 +52,7 @@ const Navlink = styled.div`
     transform: translateX(-50%);
     z-index: 3;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     flex-direction: row;
     align-items: center;
     position: static;
@@ -69,11 +69,11 @@ const ButtonLink = styled(ButtonInverseSmall)`
   text-decoration: none;
   font-size: 12px;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     background-color: transparent;
     z-index: 3;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     background-color: ${(props) => props.theme.bg};
   }
 `;
@@ -84,10 +84,10 @@ const MenuIcon = styled(FcMenu)`
   color: ${(props) => props.theme.main};
   border-radius: 50%;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     display: inline-block;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     display: none;
   }
 
@@ -103,10 +103,10 @@ const CloseIcon = styled(AiOutlineClose)`
   border-radius: 50%;
   z-index: 3;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     display: inline-block;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     display: none;
   }
 
@@ -125,10 +125,10 @@ const DropdownMenu = styled.div`
   background-color: white;
   opacity: 0.98;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     display: inline-block;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     display: none;
   }
 `;

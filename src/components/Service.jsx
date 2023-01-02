@@ -2,14 +2,14 @@ import { device } from "../styles/Device";
 import styled from "styled-components";
 
 const Container = styled.div`
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 55px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -24,10 +24,10 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     text-align: center;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     text-align: left;
   }
 `;
@@ -35,11 +35,11 @@ const Left = styled.div`
 const Title = styled.h1`
   color: ${(props) => props.theme.main};
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     font-size: 50px;
     line-height: 60px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 60px;
     line-height: 80px;
   }
@@ -68,14 +68,14 @@ const List = styled.div`
   display: flex;
   align-items: center;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     gap: 20px;
 
     &:first-child {
       gap: 37px;
     }
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     gap: 30px;
 
     &:first-child {
@@ -88,10 +88,10 @@ const Number = styled.h1`
   font-weight: 300;
   opacity: 10%;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     font-size: 79px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 135px;
   }
 `;
@@ -100,10 +100,10 @@ const Text = styled.h1`
   opacity: 70%;
   font-weight: 300;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     font-size: 30px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 50px;
   }
 `;

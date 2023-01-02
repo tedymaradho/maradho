@@ -8,14 +8,14 @@ import { useNavigate } from "react-router-dom";
 const Container = styled.div`
   height: 650px;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 60px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -28,12 +28,12 @@ const Left = styled.div`
   justify-content: center;
   opacity: 80%;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     align-items: center;
     text-align: center;
   }
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     align-items: start;
     text-align: left;
   }
@@ -52,11 +52,11 @@ const Title = styled.h1`
   font-size: 40px;
   color: ${(props) => props.theme.main};
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     margin-bottom: 20px;
   }
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     margin-bottom: 40px;
   }
 `;
@@ -69,21 +69,21 @@ const Right = styled.div`
   display: flex;
   align-items: center;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     order: -1;
     justify-content: center;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     order: 1;
     justify-content: right;
   }
 `;
 
 const Image = styled.img`
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     height: 240px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     height: 400px;
   }
 

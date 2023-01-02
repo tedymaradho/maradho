@@ -27,10 +27,10 @@ const Wrapper = styled.div`
 `;
 
 const SectionDefault = css`
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 100vw;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100%;
   }
 
@@ -51,10 +51,10 @@ const HeaderShape = styled.div`
   right: 0;
   z-index: -1;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     clip-path: polygon(81.75% 57.3%, 100% 57.3%, 100% 100%, 9.25% 100%);
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     clip-path: polygon(71% 0%, 100% 0%, 100% 100%, 45.25% 100%);
   }
 
@@ -83,11 +83,11 @@ const ServiceShape = styled.div`
   z-index: -2;
   background-color: #51734e;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 100%;
     top: 50%;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 55%;
     top: 0;
   }
@@ -102,10 +102,10 @@ const SectionTestimoni = styled.div`
   background-color: transparent;
   position: relative;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 100vw;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100%;
     display: flex;
     align-items: center;
@@ -120,11 +120,11 @@ const TestiShape = styled.div`
   z-index: -2;
   background-color: #51734e;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 100%;
     height: 45%;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 45%;
     height: 100%;
   }
@@ -141,10 +141,10 @@ const HomeIcon = styled(AiFillHome)`
   position: fixed;
   bottom: 50px;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     right: 5px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     right: 10px;
   }
 
@@ -163,10 +163,10 @@ const HomeLink = styled.a`
   position: fixed;
   bottom: 50px;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     right: 5px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     right: 10px;
   }
 

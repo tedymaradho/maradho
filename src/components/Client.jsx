@@ -4,12 +4,12 @@ import { device } from "../styles/Device";
 import styled from "styled-components";
 
 const Container = styled.div`
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -25,10 +25,10 @@ const LogoBox = styled.div`
 `;
 
 const LogoBT = styled.img`
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     height: 70px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 125px;
     height: 96px;
   }
@@ -38,10 +38,10 @@ const LogoBT = styled.img`
 `;
 
 const LogoLTS = styled.img`
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     height: 85px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 124px;
     height: 122px;
   }

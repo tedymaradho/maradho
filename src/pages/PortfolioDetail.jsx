@@ -22,10 +22,10 @@ const Wrapper = styled.div`
 `;
 
 const SectionDefault = css`
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     width: 100vw;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 100%;
   }
 
@@ -51,11 +51,11 @@ const SectionDesign = styled.div`
 const Title = styled.h1`
   color: ${(props) => props.theme.main};
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     font-size: 50px;
     line-height: 60px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 60px;
     line-height: 80px;
   }
@@ -66,21 +66,21 @@ const Desc = styled.p`
   line-height: 30px;
   margin: 20px;
 
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     font-size: 14px;
     width: 90%;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 16px;
     width: 60%;
   }
 `;
 
 const ImageDesign = styled.img`
-  @media ${device.mobileL}, ${device.mobileS} {
+  @media ${device.mobileS} {
     height: 1000px;
   }
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     height: 3000px;
   }
 
