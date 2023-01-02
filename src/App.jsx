@@ -4,6 +4,7 @@ import { GlobalStyle } from "./styles/Global";
 import Home from "./pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PortfolioDetail from "./pages/PortfolioDetail";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -11,8 +12,11 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Routes>
-          <Route index element={<Home />} />
-          <Route path="/portfolio" element={<PortfolioDetail />} />
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="portfolio" element={<PortfolioDetail />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
         </Routes>
       </ThemeProvider>
     </BrowserRouter>

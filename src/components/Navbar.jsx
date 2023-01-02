@@ -142,7 +142,7 @@ function Navbar() {
 
   const Navigate = useNavigate();
 
-  const navigateHadler = () => {
+  const navigateHandler = () => {
     Navigate("/");
     setDropdownOpen(false);
   };
@@ -156,19 +156,19 @@ function Navbar() {
         <LogoName>Maradho</LogoName>
       </LogoBox>
       <Navlink dropdownOpen={dropdownOpen}>
-        <ButtonLink as="a" href="#" onClick={navigateHadler}>
+        <ButtonLink as="a" href="#" onClick={navigateHandler}>
           Home
         </ButtonLink>
-        <ButtonLink as="a" href="#service" onClick={navigateHadler}>
+        <ButtonLink as="a" href="#service" onClick={navigateHandler}>
           Services
         </ButtonLink>
-        <ButtonLink as="a" href="#portfolio" onClick={navigateHadler}>
+        <ButtonLink as="a" href="#portfolio" onClick={navigateHandler}>
           Portfolio
         </ButtonLink>
-        <ButtonLink as="a" href="#testimonial" onClick={navigateHadler}>
+        <ButtonLink as="a" href="#testimonial" onClick={navigateHandler}>
           Testimonials
         </ButtonLink>
-        <ButtonLink as="a" href="#contact" onClick={navigateHadler}>
+        <ButtonLink as="a" href="#contact" onClick={navigateHandler}>
           Contact
         </ButtonLink>
       </Navlink>
