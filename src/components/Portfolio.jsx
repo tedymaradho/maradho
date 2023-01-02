@@ -93,7 +93,7 @@ const Image = styled.img`
 function Portfolio() {
   const Navigate = useNavigate();
 
-  const ToPortfolioHandler = () => Navigate("/portfolio");
+  const toPortfolioHandler = () => Navigate("/portfolio");
 
   return (
     <Container>
@@ -104,7 +104,7 @@ function Portfolio() {
           <br />
           Design & Build
         </Title>
-        <ButtonLink as="a" href="#" onClick={ToPortfolioHandler}>
+        <ButtonLink as="a" href="#" onClick={toPortfolioHandler}>
           See this project&nbsp;
           <BsArrowUpRight />
         </ButtonLink>

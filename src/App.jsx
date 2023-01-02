@@ -13,7 +13,7 @@ function App() {
         <GlobalStyle />
         <Routes>
           <Route index element={<Home />} />
-          <Route path="portfolio" element={<PortfolioDetail />} />
+          <Route path="/portfolio" element={<PortfolioDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ThemeProvider>
