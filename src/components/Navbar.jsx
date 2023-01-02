@@ -117,13 +117,13 @@ const CloseIcon = styled(AiOutlineClose)`
 
 const DropdownMenu = styled.div`
   width: 100vw;
-  height: 400px;
+  height: 360px;
   position: absolute;
   z-index: 2;
   top: 0;
   right: 0;
   background-color: white;
-  opacity: 0.99;
+  opacity: 0.97;
 
   @media ${device.mobileS} {
     display: inline-block;
@@ -138,6 +138,11 @@ function Navbar() {
 
   const Navigate = useNavigate();
 
+  const navigateHadler = () => {
+    Navigate("/");
+    setDropdownOpen(false);
+  };
+
   const dropdownToggleHandler = () => setDropdownOpen(!dropdownOpen);
 
   return (
@@ -147,20 +152,19 @@ function Navbar() {
         <LogoName>Maradho</LogoName>
       </LogoBox>
       <Navlink dropdownOpen={dropdownOpen}>
-        <ButtonLink as="a" href="#" onClick={() => Navigate("/")}>
+        <ButtonLink as="a" href="#" onClick={navigateHadler}>
           Home
         </ButtonLink>
-        <ButtonLink as="a" href="#service" onClick={() => Navigate("/")}>
+        <ButtonLink as="a" href="#service" onClick={navigateHadler}>
           Services
         </ButtonLink>
-        <ButtonLink as="a" href="#portfolio" onClick={() => Navigate("/")}>
+        <ButtonLink as="a" href="#portfolio" onClick={navigateHadler}>
           Portfolio
         </ButtonLink>
-        <ButtonLink as="a" href="#testimonial" onClick={() => Navigate("/")}>
+        <ButtonLink as="a" href="#testimonial" onClick={navigateHadler}>
           Testimonials
         </ButtonLink>
-        <ButtonLink>Tools</ButtonLink>
-        <ButtonLink as="a" href="#contact" onClick={() => Navigate("/")}>
+        <ButtonLink as="a" href="#contact" onClick={navigateHadler}>
           Contact
         </ButtonLink>
       </Navlink>
