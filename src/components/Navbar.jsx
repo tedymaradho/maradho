@@ -118,19 +118,23 @@ const CloseIcon = styled(AiOutlineClose)`
 const DropdownMenu = styled.div`
   width: 100vw;
   height: 360px;
-  position: absolute;
   z-index: 2;
-  top: 0;
-  right: 0;
   background-color: white;
   opacity: 0.98;
 
   @media ${device.mobileS} {
     display: inline-block;
+    position: absolute;
+    top: 0;
+    left: ${(props) => (props.dropdownOpen ? 0 : "150%")};
   }
   @media ${device.laptop} {
     display: none;
+    position: static;
+    transform: none;
   }
+
+  transition: all 0.5s;
 `;
 
 function Navbar() {
@@ -168,11 +172,14 @@ function Navbar() {
           Contact
         </ButtonLink>
       </Navlink>
-      <MenuIcon size="2.5em" onClick={dropdownToggleHandler} />
+      {!dropdownOpen && (
+        <MenuIcon size="2.5em" onClick={dropdownToggleHandler} />
+      )}
       {dropdownOpen && (
         <CloseIcon size="2.5em" onClick={dropdownToggleHandler} />
       )}
-      {dropdownOpen && <DropdownMenu />}
+
+      <DropdownMenu dropdownOpen={dropdownOpen} />
     </Container>
   );
 }
