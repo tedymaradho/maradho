@@ -160,7 +160,7 @@ function Navbar() {
           Testimonials
         </ButtonLink>
         <ButtonLink>Tools</ButtonLink>
-        <ButtonLink as="a" href="#contact">
+        <ButtonLink as="a" href="#contact" onClick={() => Navigate("/")}>
           Contact
         </ButtonLink>
       </Navlink>

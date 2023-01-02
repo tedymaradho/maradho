@@ -40,12 +40,50 @@ const SectionNavbar = styled.div`
 
 const SectionDesign = styled.div`
   padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   text-align: center;
   background-color: ${(props) => props.theme.bg}; ;
 `;
 
+const Title = styled.h1`
+  color: ${(props) => props.theme.main};
+
+  @media ${device.mobileS} {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  @media ${device.tablet} {
+    font-size: 60px;
+    line-height: 80px;
+  }
+`;
+
+const Desc = styled.p`
+  opacity: 80%;
+  line-height: 30px;
+  margin: 20px;
+
+  @media ${device.mobileS} {
+    font-size: 14px;
+    width: 90%;
+  }
+  @media ${device.tablet} {
+    font-size: 16px;
+    width: 60%;
+  }
+`;
+
 const ImageDesign = styled.img`
-  height: 3000px;
+  @media ${device.mobileS} {
+    height: 1000px;
+  }
+  @media ${device.tablet} {
+    height: 3000px;
+  }
+
   box-shadow: 0 0 20px -15px rgba(81, 115, 78, 1);
 `;
 
@@ -92,6 +130,14 @@ function PortfolioDetail() {
         </Wrapper>
       </SectionNavbar>
       <SectionDesign>
+        <Title>Bluder Tunjungan</Title>
+        <Desc>
+          Bluder tunjungan is a retail company that sells semi cakes called
+          bluder, this company is located in Surabaya, Indonesia.
+          <br />I use the dominant color yellow, because the branding color uses
+          yellow, as requested by the owner. I slightly gradient it with a brown
+          color like the color of the topping.
+        </Desc>
         <ImageDesign src={Design1} />
       </SectionDesign>
       <SectionFoot id="footer">
