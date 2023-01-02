@@ -78,7 +78,7 @@ const Desc = styled.p`
 
 const ImageDesign = styled.img`
   @media ${device.mobileS} {
-    height: 1000px;
+    height: 1300px;
   }
   @media ${device.laptop} {
     height: 3000px;

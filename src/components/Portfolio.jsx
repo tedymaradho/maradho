@@ -104,7 +104,7 @@ function Portfolio() {
           <br />
           Design & Build
         </Title>
-        <ButtonLink as="a" href="#" onClick={ToPortfolioHandler}>
+        <ButtonLink as="a" href="" onClick={ToPortfolioHandler}>
           See this project&nbsp;
           <BsArrowUpRight />
         </ButtonLink>

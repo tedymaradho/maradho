@@ -172,6 +172,7 @@ function Navbar() {
           Contact
         </ButtonLink>
       </Navlink>
+
       {!dropdownOpen && (
         <MenuIcon size="2.5em" onClick={dropdownToggleHandler} />
       )}
