@@ -98,6 +98,7 @@ const Title = styled.h1`
     line-height: 70px;
   }
   @media ${device.laptop} {
+    text-align: left;
     font-size: 60px;
     line-height: 80px;
   }
