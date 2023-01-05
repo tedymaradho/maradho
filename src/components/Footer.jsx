@@ -236,14 +236,26 @@ function Footer() {
         </Left>
         <Right>
           <Form>
-            <Input placeholder="Your Name" type="text" name="name" id="name" />
+            <Input
+              placeholder="Your Name"
+              type="text"
+              name="name"
+              id="name"
+              required
+            />
             <Input
               placeholder="Your Email"
               type="email"
               name="email"
               id="email"
+              required
             />
-            <Area placeholder="Project Details" id="message" name="message" />
+            <Area
+              placeholder="Project Details"
+              id="message"
+              name="message"
+              required
+            />
             <ButtonMessage>
               Send Message&nbsp;
               <FiSend />
