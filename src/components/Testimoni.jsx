@@ -1,5 +1,3 @@
-import Person1 from "../assets/person-1.png";
-import Person2 from "../assets/person-2.png";
 import { FaQuoteLeft } from "react-icons/fa";
 import { device } from "../styles/Device";
 import styled from "styled-components";
@@ -169,7 +167,10 @@ function Testimoni() {
       </Left>
       <Right>
         <TestiBox>
-          <Photo src={Person1} alt="Person Photo 1" />
+          <Photo
+            src="https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fperson-1.png?alt=media&token=7c85d056-e04a-473f-bfd8-26c8878eb021"
+            alt="Person Photo 1"
+          />
           <TextBox>
             <QuoteIcon />
             <Text>
@@ -181,7 +182,10 @@ function Testimoni() {
           </TextBox>
         </TestiBox>
         <TestiBox>
-          <Photo src={Person2} alt="Person Photo 2" />
+          <Photo
+            src="https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fperson-2.png?alt=media&token=d65bfd4d-8bf1-4eaa-81de-4eefafa52e53"
+            alt="Person Photo 2"
+          />
           <TextBox>
             <QuoteIcon />
             <Text>

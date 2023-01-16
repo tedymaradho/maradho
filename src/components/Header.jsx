@@ -1,4 +1,3 @@
-import MyPhoto from "../assets/me.png";
 import { ButtonPrimary } from "../styles/Button";
 import { FiSend } from "react-icons/fi";
 import { init } from "ityped";
@@ -107,7 +106,7 @@ const ButtonBox = styled.div`
 const Right = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url(${MyPhoto});
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fme.png?alt=media&token=ef7fb01b-a5c8-4deb-ab4a-08d9c3176743");
   background-repeat: no-repeat;
 
   @media ${device.mobileS} {

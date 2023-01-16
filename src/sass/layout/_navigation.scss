@@ -1,0 +1,36 @@
+.navigation {
+  height: 12.4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+  }
+
+  &__logo-img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__logo-name {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__link-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    transform: none;
+    opacity: 80%;
+    margin-top: 0;
+    gap: 18px;
+    transition: all 0.5s;
+  }
+}

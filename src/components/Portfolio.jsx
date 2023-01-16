@@ -1,4 +1,3 @@
-import FirstPortfolio from "../assets/portfolio-1.png";
 import { ButtonInverse } from "../styles/Button";
 import { BsArrowUpRight } from "react-icons/bs";
 import { device } from "../styles/Device";
@@ -110,7 +109,10 @@ function Portfolio() {
         </ButtonLink>
       </Left>
       <Right>
-        <Image src={FirstPortfolio} alt="First Portfolio" />
+        <Image
+          src="https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fportfolio-1.png?alt=media&token=e76746ee-d87a-4bb9-b500-ff7665e5dbcc"
+          alt="First Portfolio"
+        />
       </Right>
     </Container>
   );

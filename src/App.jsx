@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PortfolioDetail from "./pages/PortfolioDetail";
 import NotFound from "./components/NotFound";
+import "./sass/main.scss";
 
 function App() {
   return (

@@ -4,19 +4,18 @@ export const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: inherit; 
 }
 
 html {
+  font-size: 62.5%;
   background-color: ${(props) => props.theme.bg}; 
-  overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 body {
+  box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   color: ${(props) => props.theme.text};
-  overflow-x: hidden;
 }
 
 button {

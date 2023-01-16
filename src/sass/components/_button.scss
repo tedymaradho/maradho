@@ -1,0 +1,42 @@
+.btn {
+  text-decoration: none;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  gap: 5px;
+
+  &__primary {
+    background-color: $color-primary;
+    color: white;
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+  }
+
+  &__inverse {
+    background-color: white;
+    color: $color-text;
+    opacity: 80%;
+
+    &:hover {
+      opacity: 100%;
+    }
+
+    &--sm {
+      padding: 10px 15px;
+      color: $color-text;
+      opacity: 80%;
+
+      &:hover {
+        opacity: 100%;
+        background-color: white;
+      }
+    }
+  }
+}

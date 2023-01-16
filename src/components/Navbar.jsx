@@ -1,82 +1,10 @@
 import Logo from "../assets/logo.png";
-import { ButtonInverseSmall } from "../styles/Button";
 import { device } from "../styles/Device";
 import { FcMenu } from "react-icons/fc";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-
-const Container = styled.div`
-  height: 124px;
-  display: flex;
-  align-items: center;
-
-  @media ${device.mobileS} {
-    width: 100vw;
-    padding: 0 10px;
-  }
-  @media ${device.laptop} {
-    width: 100%;
-    padding: 0;
-  }
-
-  justify-content: space-between;
-`;
-
-const LogoBox = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-`;
-
-const LogoImage = styled.img`
-  width: 50px;
-  height: 50px;
-`;
-
-const LogoName = styled.span`
-  font-size: 20px;
-  font-weight: 600;
-`;
-
-const Navlink = styled.div`
-  display: flex;
-
-  @media ${device.mobileS} {
-    flex-direction: column;
-    position: absolute;
-    top: ${(props) => props.dropdownOpen && "65px"};
-    left: ${(props) => (props.dropdownOpen ? "50%" : "150%")};
-    transform: translateX(-50%);
-    z-index: 3;
-  }
-  @media ${device.laptop} {
-    flex-direction: row;
-    align-items: center;
-    position: static;
-    transform: none;
-    opacity: 80%;
-    margin-top: 0;
-  }
-
-  gap: 18px;
-  transition: all 0.5s;
-`;
-
-const ButtonLink = styled(ButtonInverseSmall)`
-  text-decoration: none;
-  font-size: 12px;
-
-  @media ${device.mobileS} {
-    background-color: transparent;
-    z-index: 3;
-  }
-  @media ${device.laptop} {
-    background-color: ${(props) => props.theme.bg};
-  }
-`;
 
 const MenuIcon = styled(FcMenu)`
   padding: 7px;
@@ -150,28 +78,48 @@ function Navbar() {
   const dropdownToggleHandler = () => setDropdownOpen(!dropdownOpen);
 
   return (
-    <Container>
-      <LogoBox onClick={() => Navigate("/")}>
-        <LogoImage src={Logo} alt="Logo Maradho" />
-        <LogoName>Maradho</LogoName>
-      </LogoBox>
-      <Navlink dropdownOpen={dropdownOpen}>
-        <ButtonLink as="a" href="#" onClick={navigateHandler}>
+    <div className="navigation">
+      <div className="navigation__logo-box" onClick={() => Navigate("/")}>
+        <img className="navigation__logo-img" src={Logo} alt="Logo Maradho" />
+        <span className="navigation__logo-name">Maradho</span>
+      </div>
+      <div className="navigation__link-box" dropdownOpen={dropdownOpen}>
+        <a
+          className="btn btn__inverse btn__inverse--sm"
+          href="#"
+          onClick={navigateHandler}
+        >
           Home
-        </ButtonLink>
-        <ButtonLink as="a" href="#service" onClick={navigateHandler}>
+        </a>
+        <a
+          className="btn btn__inverse btn__inverse--sm"
+          href="#service"
+          onClick={navigateHandler}
+        >
           Services
-        </ButtonLink>
-        <ButtonLink as="a" href="#portfolio" onClick={navigateHandler}>
+        </a>
+        <a
+          className="btn btn__inverse btn__inverse--sm"
+          href="#portfolio"
+          onClick={navigateHandler}
+        >
           Portfolio
-        </ButtonLink>
-        <ButtonLink as="a" href="#testimonial" onClick={navigateHandler}>
+        </a>
+        <a
+          className="btn btn__inverse btn__inverse--sm"
+          href="#testimonial"
+          onClick={navigateHandler}
+        >
           Testimonials
-        </ButtonLink>
-        <ButtonLink as="a" href="#contact" onClick={navigateHandler}>
+        </a>
+        <a
+          className="btn btn__inverse btn__inverse--sm"
+          href="#contact"
+          onClick={navigateHandler}
+        >
           Contact
-        </ButtonLink>
-      </Navlink>
+        </a>
+      </div>
 
       {!dropdownOpen && (
         <MenuIcon size="2.5em" onClick={dropdownToggleHandler} />
@@ -181,7 +129,7 @@ function Navbar() {
       )}
 
       <DropdownMenu dropdownOpen={dropdownOpen} />
-    </Container>
+    </div>
   );
 }
 
