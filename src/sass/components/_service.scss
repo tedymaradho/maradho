@@ -1,0 +1,41 @@
+.service {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 65rem;
+
+  &__left-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  &__right-box {
+    color: white;
+    line-height: 1.1;
+  }
+
+  &__list-box {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    &:first-child {
+      gap: 4.7rem;
+    }
+  }
+
+  &__number {
+    font-weight: 300;
+    opacity: 10%;
+    font-size: 13.5rem;
+  }
+
+  &__text {
+    opacity: 70%;
+    font-weight: 300;
+    font-size: 5rem;
+  }
+}

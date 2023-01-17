@@ -1,0 +1,88 @@
+.home {
+  max-width: 136.6rem;
+  margin: 0 auto;
+  box-shadow: 0 0 2rem rgba(81, 115, 78, 0.9);
+
+  > * {
+    background-color: white;
+  }
+
+  &__wrapper {
+    width: 108.5rem;
+    margin: 0 auto;
+  }
+
+  &__section {
+    width: 100%;
+    height: 65rem;
+
+    &--header {
+      position: relative;
+      background-color: transparent;
+    }
+
+    &--client,
+    &--sosmed {
+      height: 25.8rem;
+      display: flex;
+      align-items: center;
+      opacity: 80%;
+    }
+
+    &--service {
+      background-color: $color-bg;
+      position: relative;
+      z-index: -1;
+    }
+
+    &--testimoni {
+      background-color: transparent;
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &--footer {
+      background-color: $color-primary;
+    }
+  }
+
+  &__shape {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    background-color: $color-primary;
+
+    &--header {
+      width: 85%;
+      right: 0;
+      clip-path: polygon(71% 0%, 100% 0%, 100% 100%, 45.25% 100%);
+    }
+
+    &--service {
+      right: 0;
+      width: 55%;
+    }
+
+    &--testimoni {
+      left: 0;
+      width: 45%;
+    }
+  }
+
+  &__link {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    z-index: 4;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0;
+  }
+}

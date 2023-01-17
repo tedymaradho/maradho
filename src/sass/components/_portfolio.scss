@@ -1,0 +1,31 @@
+.portfolio {
+  height: 65rem;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &__left-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 80%;
+    align-items: start;
+    text-align: left;
+
+    & button {
+      width: fit-content;
+      border: 0.1rem solid $color-primary;
+    }
+  }
+
+  &__right-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__img {
+    height: 40rem;
+    box-shadow: 5px 35px 32px -30px rgba(81, 115, 78, 0.9);
+  }
+}

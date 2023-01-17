@@ -1,4 +1,4 @@
-.navigation {
+.navbar {
   height: 12.4rem;
   width: 100%;
   display: flex;
@@ -31,6 +31,20 @@
     opacity: 80%;
     margin-top: 0;
     gap: 18px;
+    transition: all 0.5s;
+  }
+
+  &__dropdown-menu {
+    width: 100vw;
+    height: 360px;
+    z-index: 2;
+    background-color: white;
+    opacity: 0.98;
+
+    display: none;
+    position: static;
+    transform: none;
+
     transition: all 0.5s;
   }
 }

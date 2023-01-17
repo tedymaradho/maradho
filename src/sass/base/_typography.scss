@@ -1,0 +1,59 @@
+.heading {
+  width: fit-content;
+  font-weight: bold;
+  margin-bottom: 2rem;
+
+  &__primary {
+    font-size: 7rem;
+    line-height: 9rem;
+  }
+
+  &__secondary {
+    font-size: 6rem;
+    line-height: 8rem;
+  }
+
+  &--dark {
+    color: $color-primary;
+
+    & span {
+      background-color: $color-bg;
+    }
+  }
+
+  &--light {
+    color: $color-bg;
+
+    & span {
+      background-color: $color-primary;
+    }
+  }
+
+  &--weak {
+    opacity: 50%;
+  }
+}
+
+.title {
+}
+
+.subtitle {
+  width: fit-content;
+  margin-bottom: 1rem;
+  line-height: 3.3rem;
+  opacity: 85%;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 90%;
+    opacity: 0.6;
+    background-color: $color-bg;
+    z-index: -1;
+  }
+}

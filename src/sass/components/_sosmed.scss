@@ -1,0 +1,23 @@
+.sosmed {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  justify-content: flex-start;
+
+  &__wrapper {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  &__link {
+    cursor: pointer;
+    opacity: 70%;
+    display: flex;
+    align-items: center;
+    color: gray;
+
+    &:hover {
+      opacity: 100%;
+    }
+  }
+}
