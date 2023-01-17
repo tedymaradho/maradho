@@ -22,14 +22,10 @@ function Header() {
           <span>Maradho&nbsp;Pasa</span>
         </h1>
         <p className="subtitle">
-          <span>
-            Hi, I'm a <span ref={textRef}></span>
-          </span>
+          Hi, I'm a <span ref={textRef}></span>
           <br />
-          <span>
-            Serving web design, creation and development to become a stunning
-            website.
-          </span>
+          Serving web design, creation and development to become a stunning
+          website.
         </p>
         <div className="header__button-box">
           <a className="btn btn__primary" href="#footer">

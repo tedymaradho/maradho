@@ -1,5 +1,5 @@
 .navbar {
-  height: 12.4rem;
+  height: 6rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -13,8 +13,8 @@
   }
 
   &__logo-img {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
   }
 
   &__logo-name {
@@ -40,11 +40,9 @@
     z-index: 2;
     background-color: white;
     opacity: 0.98;
-
     display: none;
     position: static;
     transform: none;
-
     transition: all 0.5s;
   }
 }

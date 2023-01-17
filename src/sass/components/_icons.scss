@@ -27,16 +27,3 @@
   color: lightgray;
   font-size: 3rem;
 }
-
-.icon__home {
-  position: fixed;
-  bottom: 50px;
-
-  right: 10px;
-
-  cursor: pointer;
-  color: $color-primary;
-  border-radius: 50%;
-  padding: 5px;
-  box-shadow: 0 0 20px -15px rgba($color-primary, 0.15);
-}

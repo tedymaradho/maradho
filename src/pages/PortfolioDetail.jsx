@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { AiFillHome } from "react-icons/ai";
 import { useInView } from "react-intersection-observer";
 
 function PortfolioDetail() {
@@ -39,10 +38,6 @@ function PortfolioDetail() {
           <Footer />
         </div>
       </div>
-      {inView === false && <AiFillHome className="icon__home" size="2.5em" />}
-      {inView === false && (
-        <a className="portfolio-detail__home-link" href="#" />
-      )}
     </div>
   );
 }

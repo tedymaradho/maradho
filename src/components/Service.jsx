@@ -3,17 +3,13 @@ function Service() {
     <div className="service">
       <div className="service__left-box">
         <h1 className="heading heading__primary heading--dark">
-          <span>Solving</span>
+          Solving
           <br />
-          <span>
-            problems&nbsp;
-            <span className="heading--weak">by</span>
-          </span>
+          problems&nbsp;
+          <span className="heading--weak">by</span>
           <br />
-          <span>
-            <span className="heading--weak">the</span>
-            &nbsp; services
-          </span>
+          <span className="heading--weak">the</span>
+          &nbsp;services
         </h1>
         <p className="subtitle">
           Provide solutions to your problems, and

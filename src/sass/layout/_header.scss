@@ -1,5 +1,5 @@
 .header {
-  height: calc(65rem - 12.4rem);
+  height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -18,8 +18,10 @@
   }
 
   &__right-box {
+    height: 100%;
     background-image: url("https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fme.png?alt=media&token=ef7fb01b-a5c8-4deb-ab4a-08d9c3176743");
-    background-size: cover;
+    background-size: contain;
+    background-position: bottom center;
     background-repeat: no-repeat;
   }
 }

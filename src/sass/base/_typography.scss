@@ -6,6 +6,7 @@
   &__primary {
     font-size: 7rem;
     line-height: 9rem;
+    animation: moveInLeft 0.9s ease-in-out;
   }
 
   &__secondary {
@@ -16,21 +17,22 @@
   &--dark {
     color: $color-primary;
 
-    & span {
-      background-color: $color-bg;
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+      background: linear-gradient(to left top, $color-text, $color-primary);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
     }
   }
 
   &--light {
     color: $color-bg;
-
-    & span {
-      background-color: $color-primary;
-    }
   }
 
   &--weak {
-    opacity: 50%;
+    font-size: 4rem;
   }
 }
 
@@ -38,12 +40,14 @@
 }
 
 .subtitle {
+  font-size: 1.5rem;
   width: fit-content;
   margin-bottom: 1rem;
   line-height: 3.3rem;
   opacity: 85%;
   position: relative;
   z-index: 1;
+  animation: moveInRight 0.9s ease-in-out;
 
   &::before {
     content: "";

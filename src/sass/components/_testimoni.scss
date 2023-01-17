@@ -41,6 +41,8 @@
     opacity: 80%;
     width: 100%;
     gap: 2rem;
+    animation: moveInRight 0.9s ease-in-out 0.3s;
+    animation-fill-mode: backwards;
 
     & span {
       color: $color-primary;
