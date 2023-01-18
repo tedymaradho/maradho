@@ -72,7 +72,14 @@
     &--service {
       right: 0;
       width: 85%;
-      clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 40% 100%, 30% 25%);
+      clip-path: polygon(
+        40% 0%,
+        100% 0%,
+        90% 25%,
+        100% 100%,
+        40% 100%,
+        30% 25%
+      );
       background-image: linear-gradient(to left, $color-text, $color-primary);
     }
 
