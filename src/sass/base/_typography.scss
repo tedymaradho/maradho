@@ -48,16 +48,4 @@
   position: relative;
   z-index: 1;
   animation: moveInRight 0.9s ease-in-out;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 90%;
-    opacity: 0.6;
-    background-color: $color-bg;
-    z-index: -1;
-  }
 }

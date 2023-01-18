@@ -17,16 +17,12 @@
     height: 90vh;
 
     &--navbar {
-      width: 100%;
       top: 0;
       z-index: 5;
-      background-color: rgba(white, 0.95);
-      box-shadow: 0 1px 15px rgba(0, 0, 0, 0.14);
     }
 
     &--header {
       position: relative;
-      background-color: $color-bg;
       z-index: 1;
     }
 
@@ -39,7 +35,6 @@
     }
 
     &--service {
-      background-color: $color-bg;
       position: relative;
       z-index: -1;
     }
@@ -54,8 +49,7 @@
     }
 
     &--footer {
-      height: 100%;
-      background-color: $color-primary;
+      background-image: linear-gradient(to bottom, $color-primary, $color-text);
     }
   }
 
@@ -70,7 +64,7 @@
       right: 0;
       clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 40% 100%);
       background-image: url("https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fbatik-white.png?alt=media&token=64a70bd5-5051-4eab-b18b-58d2dc6e8b84"),
-        linear-gradient(to top, $color-text, $color-primary);
+        linear-gradient(to left, $color-text, $color-primary);
       background-size: contain;
       background-position: right bottom;
       background-repeat: no-repeat;
@@ -78,14 +72,15 @@
 
     &--service {
       right: 0;
-      width: 55%;
+      width: 85%;
+      clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 40% 100%, 30% 50%);
       background-image: linear-gradient(to left, $color-text, $color-primary);
     }
 
     &--testimoni {
       left: 0;
       width: 45%;
-      background-image: linear-gradient(to left, $color-primary, $color-text);
+      background-image: linear-gradient(to top, $color-primary, $color-text);
     }
   }
 }

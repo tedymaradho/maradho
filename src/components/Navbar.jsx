@@ -46,14 +46,7 @@ function Navbar() {
         </a>
         <a
           className="btn btn__inverse btn__inverse--sm border--no"
-          href="#testimonial"
-          onClick={navigateHandler}
-        >
-          Testimonials
-        </a>
-        <a
-          className="btn btn__inverse btn__inverse--sm border--no"
-          href="#contact"
+          href="#footer"
           onClick={navigateHandler}
         >
           Contact

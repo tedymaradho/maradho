@@ -51,10 +51,10 @@ function Footer() {
               name="message"
               required
             />
-            <a className="btn btn__inverse">
+            <button type="submit" className="btn btn__inverse">
               Send Message&nbsp;
               <FiSend />
-            </a>
+            </button>
           </form>
         </div>
       </div>

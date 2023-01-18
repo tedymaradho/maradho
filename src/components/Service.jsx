@@ -18,29 +18,31 @@ function Service() {
         </p>
       </div>
       <div className="service__right-box">
-        <div className="service__list-box">
-          <h1 className="service__number">1</h1>
-          <h2 className="service__text">
-            Web
-            <br />
-            Design
-          </h2>
-        </div>
-        <div className="service__list-box">
-          <h1 className="service__number">2</h1>
-          <h2 className="service__text">
-            Web
-            <br />
-            Development
-          </h2>
-        </div>
-        <div className="service__list-box">
-          <h1 className="service__number">3</h1>
-          <h2 className="service__text">
-            Web
-            <br />
-            Optimization
-          </h2>
+        <div>
+          <div className="service__list-box">
+            <h1 className="service__number">1</h1>
+            <h2 className="service__text">
+              Web
+              <br />
+              Design
+            </h2>
+          </div>
+          <div className="service__list-box">
+            <h1 className="service__number">2</h1>
+            <h2 className="service__text">
+              Web
+              <br />
+              Development
+            </h2>
+          </div>
+          <div className="service__list-box">
+            <h1 className="service__number">3</h1>
+            <h2 className="service__text">
+              Web
+              <br />
+              Optimization
+            </h2>
+          </div>
         </div>
       </div>
     </div>

@@ -22,21 +22,19 @@ function Home() {
       </div>
       <div className="home__section home__section--header" ref={ref}>
         <div className="home__wrapper">
-          {inView === false && <Header />}
+          {inView === true && <Header />}
           <div className="home__shape home__shape--header"></div>
         </div>
       </div>
-      <div className="home__section--client">
+      {/* <div className="home__section--client">
         <div className="home__wrapper">
           <Client />
         </div>
-      </div>
-      <div
-        className="home__section home__section--service"
-        id="service"
-        ref={ref}
-      >
-        <div className="home__wrapper">{inView === true && <Service />}</div>
+      </div> */}
+      <div className="home__section home__section--service" id="service">
+        <div className="home__wrapper">
+          <Service />
+        </div>
         <div className="home__shape home__shape--service" />
       </div>
       <div className="home__section" id="portfolio">
@@ -44,15 +42,17 @@ function Home() {
           <Portfolio />
         </div>
       </div>
-      <div className="home__section home__section--testimoni" id="testimonial">
-        <div className="home__wrapper">{inView === false && <Testimoni />}</div>
+      {/* <div className="home__section home__section--testimoni" id="testimonial">
+        <div className="home__wrapper">
+          <Testimoni />
+        </div>
         <div className="home__shape home__shape--testimoni" />
-      </div>
-      <div className="home__section--sosmed" id="contact">
+      </div> */}
+      {/* <div className="home__section--sosmed" id="contact">
         <div className="home__wrapper">
           <Sosmed />
         </div>
-      </div>
+      </div> */}
       <div className="home__section home__section--footer" id="footer">
         <div className="home__wrapper">
           <Footer />

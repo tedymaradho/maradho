@@ -12,7 +12,7 @@
   gap: 0.5rem;
 
   &__primary {
-    background-color: $color-primary;
+    background-image: linear-gradient(to bottom, $color-primary, $color-text);
     color: white;
     animation: moveInBottom 0.5s ease-out 0.7s;
     animation-fill-mode: backwards;
@@ -24,11 +24,10 @@
 
   &__inverse {
     background-color: white;
-    color: $color-text;
-    opacity: 80%;
+    color: $color-primary;
 
     &:hover {
-      opacity: 100%;
+      color: $color-text;
     }
 
     &--sm {
@@ -36,7 +35,12 @@
 
       &:hover {
         opacity: 100%;
-        background-color: $color-bg;
+        background-image: linear-gradient(
+          to bottom,
+          $color-primary,
+          $color-text
+        );
+        color: white;
       }
     }
   }
