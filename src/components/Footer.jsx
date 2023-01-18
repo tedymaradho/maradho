@@ -1,274 +1,105 @@
-import { ButtonInverse } from "../styles/Button";
 import Logo from "../assets/logo.png";
+import { BsGithub, BsLinkedin, BsYoutube } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import { FiSend } from "react-icons/fi";
-import { device } from "../styles/Device";
-import styled from "styled-components";
-
-const Container = styled.div`
-  color: ${(props) => props.theme.bg};
-  height: 650px;
-  padding: 30px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`;
-
-const Wrapper = styled.div`
-  height: 100%;
-  display: flex;
-  @media ${device.mobileS} {
-    width: 100vh;
-    flex-direction: column;
-    align-items: center;
-  }
-  @media ${device.laptop} {
-    width: 100%;
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  justify-content: space-between;
-
-  &:first-child {
-    gap: 30px;
-
-    @media ${device.mobileS} {
-      width: 100vw;
-    }
-    @media ${device.laptop} {
-      width: 100%;
-    }
-  }
-
-  &:last-child {
-    @media ${device.mobileS} {
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    @media ${device.laptop} {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-end;
-      justify-content: space-between;
-    }
-  }
-`;
-
-const Left = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media ${device.mobileS} {
-    align-items: center;
-    width: 100vh;
-    gap: 10px;
-  }
-  @media ${device.laptop} {
-    align-items: flex-start;
-    width: 100%;
-    gap: 20px;
-  }
-`;
-
-const LogoBox = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-`;
-
-const LogoImage = styled.img`
-  width: 50px;
-  height: 50px;
-`;
-
-const LogoName = styled.span`
-  font-size: 20px;
-  font-weight: 600;
-`;
-
-const Title = styled.h1`
-  @media ${device.mobileS} {
-    text-align: center;
-    font-size: 45px;
-    line-height: 70px;
-  }
-  @media ${device.laptop} {
-    text-align: left;
-    font-size: 60px;
-    line-height: 80px;
-  }
-`;
-
-const Email = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding-left: 2px;
-`;
-
-const Address = styled.div`
-  @media ${device.mobileS} {
-    display: none;
-  }
-  @media ${device.laptop} {
-    display: flex;
-    align-items: center;
-  }
-`;
-
-const Reserved = styled.p`
-  @media ${device.mobileS} {
-    opacity: 0;
-  }
-  @media ${device.laptop} {
-    opacity: 50%;
-  }
-`;
-
-const Right = styled.div`
-  display: flex;
-  @media ${device.mobileS} {
-    width: 100vh;
-    justify-content: center;
-  }
-  @media ${device.laptop} {
-    width: 100%;
-    height: 550px;
-    justify-content: flex-end;
-    align-items: center;
-  }
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-
-  @media ${device.mobileS} {
-    width: 350px;
-    gap: 10px;
-  }
-  @media ${device.laptop} {
-    gap: 20px;
-  }
-`;
-
-const Input = styled.input`
-  background-color: ${(props) => props.theme.bg};
-
-  @media ${device.mobileS} {
-    font-size: 14px;
-    height: 30px;
-  }
-  @media ${device.laptop} {
-    font-size: 16px;
-    height: 35px;
-  }
-
-  padding: 0 10px;
-
-  border-radius: 8px;
-  border: none;
-  outline: none;
-`;
-
-const Area = styled.textarea`
-  background-color: ${(props) => props.theme.bg};
-  font-family: "Inter", sans-serif;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-
-  @media ${device.mobileS} {
-    height: 130px;
-    padding: 5px;
-    font-size: 14px;
-  }
-  @media ${device.laptop} {
-    height: 180px;
-    padding: 10px;
-    font-size: 16px;
-  }
-`;
-
-const ButtonMessage = styled(ButtonInverse)`
-  width: fit-content;
-
-  @media ${device.mobileS} {
-    font-size: 12px;
-    margin: 0 auto;
-  }
-  @media ${device.laptop} {
-    font-size: 14px;
-    margin: 0;
-  }
-`;
-
-const Dev = styled.p`
-  opacity: 50%;
-`;
+import { useState } from "react";
 
 function Footer() {
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const emailCopyHandler = () => {
+    navigator.clipboard.writeText("maradho@gmail.com");
+    setEmailCopied(true);
+    setTimeout(() => {
+      setEmailCopied(false);
+    }, 1200);
+
+    console.log(emailCopied);
+  };
+
   return (
-    <Container>
-      <Wrapper>
-        <Left>
-          <LogoBox>
-            <LogoImage src={Logo} alt="Logo Maradho" />
-            <LogoName>Maradho</LogoName>
-          </LogoBox>
-          <Title>
+    <div className="footer">
+      <div className="footer__wrapper">
+        <div className="footer__left-box">
+          <div className="footer__logo-box">
+            <img className="footer__logo-img" src={Logo} alt="Logo Maradho" />
+            <span className="footer__logo-name">Maradho</span>
+          </div>
+          <div className="heading heading__primary heading--light">
             Let’s Discuss
             <br />
             Your Project
-          </Title>
-          <Email>
+          </div>
+          <div className="footer__email" onClick={emailCopyHandler}>
             <AiOutlineMail size="1.5em" />
-            &nbsp;maradho@gmail.com
-          </Email>
-          <Address>
+            &nbsp;
+            {emailCopied === true ? "Email copied ✅" : "maradho@gmail.com"}
+          </div>
+          <div className="footer__address">
             <CiLocationOn size="1.8em" />
-            &nbsp;Sidoarjo, Indonesia
-          </Address>
-        </Left>
-        <Right>
-          <Form>
-            <Input
+            &nbsp;Indonesia
+          </div>
+        </div>
+        <div className="footer__right-box">
+          <form className="footer__form">
+            <input
+              className="footer__form--input"
               placeholder="Your Name"
               type="text"
               name="name"
               id="name"
               required
             />
-            <Input
+            <input
+              className="footer__form--input"
               placeholder="Your Email"
               type="email"
               name="email"
               id="email"
               required
             />
-            <Area
+            <textarea
+              className="footer__form--text-area"
               placeholder="Project Details"
               id="message"
               name="message"
               required
             />
-            <ButtonMessage>
+            <button type="submit" className="btn btn__inverse">
               Send Message&nbsp;
               <FiSend />
-            </ButtonMessage>
-          </Form>
-        </Right>
-      </Wrapper>
-      <Wrapper>
-        <Reserved>@2022 All Right Reserved</Reserved>
-        <Dev>Designed & Built by Tedy</Dev>
-      </Wrapper>
-    </Container>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div className="footer__wrapper">
+        <div className="footer__sosmed--box">
+          <a
+            className="footer__sosmed--link opacity--50"
+            href="https://www.linkedin.com/in/tedy-maradho-pasa-220731233/"
+            target="_blank"
+          >
+            <BsLinkedin size="2rem" />
+          </a>
+          <a
+            className="footer__sosmed--link opacity--50"
+            href="https://github.com/tedymaradho"
+            target="_blank"
+          >
+            <BsGithub size="2.3rem" />
+          </a>
+          <a
+            className="footer__sosmed--link opacity--50"
+            href="https://www.youtube.com/channel/UCaWfnzdzI9T4nGRq1TR_fMg"
+            target="_blank"
+          >
+            <BsYoutube size="2.6rem" />
+          </a>
+        </div>
+        <p className="opacity--50">Designed & Built by Tedy</p>
+      </div>
+    </div>
   );
 }
 

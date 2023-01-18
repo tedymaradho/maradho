@@ -1,0 +1,29 @@
+.icon__menu {
+  padding: 0.7rem;
+  background-color: $color-bg;
+  color: $color-primary;
+  border-radius: 50%;
+  display: none;
+
+  &:hover {
+    background-color: white;
+  }
+}
+
+.icon__close {
+  padding: 7rem;
+  background-color: white;
+  color: $color-primary;
+  border-radius: 50%;
+  z-index: 3;
+  display: none;
+
+  &:hover {
+    background-color: $color-bg;
+  }
+}
+
+.icon__quote {
+  color: lightgray;
+  font-size: 3rem;
+}

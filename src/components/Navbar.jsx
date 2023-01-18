@@ -1,187 +1,65 @@
 import Logo from "../assets/logo.png";
-import { ButtonInverseSmall } from "../styles/Button";
-import { device } from "../styles/Device";
-import { FcMenu } from "react-icons/fc";
-import { AiOutlineClose } from "react-icons/ai";
-import { useState } from "react";
-import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-
-const Container = styled.div`
-  height: 124px;
-  display: flex;
-  align-items: center;
-
-  @media ${device.mobileS} {
-    width: 100vw;
-    padding: 0 10px;
-  }
-  @media ${device.laptop} {
-    width: 100%;
-    padding: 0;
-  }
-
-  justify-content: space-between;
-`;
-
-const LogoBox = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-`;
-
-const LogoImage = styled.img`
-  width: 50px;
-  height: 50px;
-`;
-
-const LogoName = styled.span`
-  font-size: 20px;
-  font-weight: 600;
-`;
-
-const Navlink = styled.div`
-  display: flex;
-
-  @media ${device.mobileS} {
-    flex-direction: column;
-    position: absolute;
-    top: ${(props) => props.dropdownOpen && "65px"};
-    left: ${(props) => (props.dropdownOpen ? "50%" : "150%")};
-    transform: translateX(-50%);
-    z-index: 3;
-  }
-  @media ${device.laptop} {
-    flex-direction: row;
-    align-items: center;
-    position: static;
-    transform: none;
-    opacity: 80%;
-    margin-top: 0;
-  }
-
-  gap: 18px;
-  transition: all 0.5s;
-`;
-
-const ButtonLink = styled(ButtonInverseSmall)`
-  text-decoration: none;
-  font-size: 12px;
-
-  @media ${device.mobileS} {
-    background-color: transparent;
-    z-index: 3;
-  }
-  @media ${device.laptop} {
-    background-color: ${(props) => props.theme.bg};
-  }
-`;
-
-const MenuIcon = styled(FcMenu)`
-  padding: 7px;
-  background-color: ${(props) => props.theme.bg};
-  color: ${(props) => props.theme.main};
-  border-radius: 50%;
-
-  @media ${device.mobileS} {
-    display: inline-block;
-  }
-  @media ${device.laptop} {
-    display: none;
-  }
-
-  &:hover {
-    background-color: white;
-  }
-`;
-
-const CloseIcon = styled(AiOutlineClose)`
-  padding: 7px;
-  background-color: white;
-  color: ${(props) => props.theme.main};
-  border-radius: 50%;
-  z-index: 3;
-
-  @media ${device.mobileS} {
-    display: inline-block;
-  }
-  @media ${device.laptop} {
-    display: none;
-  }
-
-  &:hover {
-    background-color: ${(props) => props.theme.bg};
-  }
-`;
-
-const DropdownMenu = styled.div`
-  width: 100vw;
-  height: 360px;
-  z-index: 2;
-  background-color: white;
-  opacity: 0.98;
-
-  @media ${device.mobileS} {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: ${(props) => (props.dropdownOpen ? 0 : "150%")};
-  }
-  @media ${device.laptop} {
-    display: none;
-    position: static;
-    transform: none;
-  }
-
-  transition: all 0.5s;
-`;
+import { useInView } from "react-intersection-observer";
 
 function Navbar() {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
   const Navigate = useNavigate();
 
   const navigateHandler = () => {
     Navigate("/");
-    setDropdownOpen(false);
+    document.getElementById("navbar-toggle").checked = false;
   };
 
-  const dropdownToggleHandler = () => setDropdownOpen(!dropdownOpen);
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+  });
 
   return (
-    <Container>
-      <LogoBox onClick={() => Navigate("/")}>
-        <LogoImage src={Logo} alt="Logo Maradho" />
-        <LogoName>Maradho</LogoName>
-      </LogoBox>
-      <Navlink dropdownOpen={dropdownOpen}>
-        <ButtonLink as="a" href="#" onClick={navigateHandler}>
+    <div className="navbar" ref={ref}>
+      <input type="checkbox" className="navbar__checkbox" id="navbar-toggle" />
+
+      {inView === false && (
+        <label for="navbar-toggle" className="navbar__button">
+          <span className="navbar__icon">&nbsp;</span>
+        </label>
+      )}
+      {inView === false && <div className="navbar__background">&nbsp;</div>}
+
+      <div className="navbar__logo-box" onClick={() => Navigate("/")}>
+        <img className="navbar__logo-img" src={Logo} alt="Logo Maradho" />
+        <span className="navbar__logo-name">Maradho</span>
+      </div>
+      <div className="navbar__link-box">
+        <a
+          className="btn btn__inverse btn__inverse--sm border--no"
+          href="#"
+          onClick={navigateHandler}
+        >
           Home
-        </ButtonLink>
-        <ButtonLink as="a" href="#service" onClick={navigateHandler}>
+        </a>
+        <a
+          className="btn btn__inverse btn__inverse--sm border--no"
+          href="#service"
+          onClick={navigateHandler}
+        >
           Services
-        </ButtonLink>
-        <ButtonLink as="a" href="#portfolio" onClick={navigateHandler}>
+        </a>
+        <a
+          className="btn btn__inverse btn__inverse--sm border--no"
+          href="#portfolio"
+          onClick={navigateHandler}
+        >
           Portfolio
-        </ButtonLink>
-        <ButtonLink as="a" href="#testimonial" onClick={navigateHandler}>
-          Testimonials
-        </ButtonLink>
-        <ButtonLink as="a" href="#contact" onClick={navigateHandler}>
+        </a>
+        <a
+          className="btn btn__inverse btn__inverse--sm border--no"
+          href="#footer"
+          onClick={navigateHandler}
+        >
           Contact
-        </ButtonLink>
-      </Navlink>
-
-      {!dropdownOpen && (
-        <MenuIcon size="2.5em" onClick={dropdownToggleHandler} />
-      )}
-      {dropdownOpen && (
-        <CloseIcon size="2.5em" onClick={dropdownToggleHandler} />
-      )}
-
-      <DropdownMenu dropdownOpen={dropdownOpen} />
-    </Container>
+        </a>
+      </div>
+    </div>
   );
 }
 
