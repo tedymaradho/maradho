@@ -18,7 +18,7 @@
     animation-fill-mode: backwards;
 
     &:hover {
-      background-color: $color-primary-dark;
+      background-image: linear-gradient(to top, $color-primary, $color-text);
     }
   }
 
@@ -35,11 +35,7 @@
 
       &:hover {
         opacity: 100%;
-        background-image: linear-gradient(
-          to bottom,
-          $color-primary,
-          $color-text
-        );
+        background-color: $color-primary;
         color: white;
       }
     }

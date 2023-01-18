@@ -22,6 +22,7 @@ function Portfolio() {
       </div>
       <div className="portfolio__right-box">
         <img
+          sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
           className="portfolio__img"
           src="https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fportfolio-1.png?alt=media&token=e76746ee-d87a-4bb9-b500-ff7665e5dbcc"
           alt="First Portfolio"

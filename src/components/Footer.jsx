@@ -1,9 +1,23 @@
 import Logo from "../assets/logo.png";
+import { BsGithub, BsLinkedin, BsYoutube } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import { FiSend } from "react-icons/fi";
+import { useState } from "react";
 
 function Footer() {
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const emailCopyHandler = () => {
+    navigator.clipboard.writeText("maradho@gmail.com");
+    setEmailCopied(true);
+    setTimeout(() => {
+      setEmailCopied(false);
+    }, 1200);
+
+    console.log(emailCopied);
+  };
+
   return (
     <div className="footer">
       <div className="footer__wrapper">
@@ -17,13 +31,14 @@ function Footer() {
             <br />
             Your Project
           </div>
-          <div className="footer__email">
+          <div className="footer__email" onClick={emailCopyHandler}>
             <AiOutlineMail size="1.5em" />
-            &nbsp;maradho@gmail.com
+            &nbsp;
+            {emailCopied === true ? "Email copied ✅" : "maradho@gmail.com"}
           </div>
           <div className="footer__address">
             <CiLocationOn size="1.8em" />
-            &nbsp;Sidoarjo, Indonesia
+            &nbsp;Indonesia
           </div>
         </div>
         <div className="footer__right-box">
@@ -59,7 +74,29 @@ function Footer() {
         </div>
       </div>
       <div className="footer__wrapper">
-        <p className="opacity--50">@2022 All Right Reserved</p>
+        <div className="footer__sosmed--box">
+          <a
+            className="footer__sosmed--link opacity--50"
+            href="https://www.linkedin.com/in/tedy-maradho-pasa-220731233/"
+            target="_blank"
+          >
+            <BsLinkedin size="2rem" />
+          </a>
+          <a
+            className="footer__sosmed--link opacity--50"
+            href="https://github.com/tedymaradho"
+            target="_blank"
+          >
+            <BsGithub size="2.3rem" />
+          </a>
+          <a
+            className="footer__sosmed--link opacity--50"
+            href="https://www.youtube.com/channel/UCaWfnzdzI9T4nGRq1TR_fMg"
+            target="_blank"
+          >
+            <BsYoutube size="2.6rem" />
+          </a>
+        </div>
         <p className="opacity--50">Designed & Built by Tedy</p>
       </div>
     </div>

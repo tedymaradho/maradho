@@ -15,20 +15,22 @@ function PortfolioDetail() {
         </div>
       </div>
       <div className="portfolio-detail__section--design">
-        <h1 className="heading heading__primary heading--dark">
-          Bluder Tunjungan
-        </h1>
-        <p className="subtitle">
-          Bluder tunjungan is a retail company that sells semi cakes called
-          bluder, this company is located in Surabaya, Indonesia.
-          <br />I use the dominant color yellow, because the branding color uses
-          yellow, as requested by the owner. I slightly gradient it with a brown
-          color like the color of the topping.
-        </p>
-        <img
-          className="portfolio-detail__img"
-          src="https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fdesign-1.png?alt=media&token=77c8cf4a-1101-4344-9119-aeaae480e409"
-        />
+        <div className="portfolio-detail__wrapper">
+          <h1 className="heading heading__primary heading--light">
+            Bluder Tunjungan
+          </h1>
+          <p className="subtitle heading--light">
+            Bluder tunjungan is a retail company that sells semi cakes. I use
+            the dominant color yellow, because the branding color uses yellow,
+            as requested by the owner. I slightly gradient it with a brown color
+            like the color of the topping.
+          </p>
+          <img
+            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+            className="portfolio-detail__img"
+            src="https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fdesign-1.png?alt=media&token=77c8cf4a-1101-4344-9119-aeaae480e409"
+          />
+        </div>
       </div>
       <div
         className="portfolio-detail__section portfolio-detail__section--foot"
