@@ -82,21 +82,21 @@ function Footer() {
             href="https://www.linkedin.com/in/tedy-maradho-pasa-220731233/"
             target="_blank"
           >
-            <BsLinkedin size="2rem" />
+            <BsLinkedin size="2.4rem" />
           </a>
           <a
             className="footer__sosmed--link opacity--50"
             href="https://github.com/tedymaradho"
             target="_blank"
           >
-            <BsGithub size="2.3rem" />
+            <BsGithub size="2.7rem" />
           </a>
           <a
             className="footer__sosmed--link opacity--50"
             href="https://www.youtube.com/channel/UCaWfnzdzI9T4nGRq1TR_fMg"
             target="_blank"
           >
-            <BsYoutube size="2.6rem" />
+            <BsYoutube size="3rem" />
           </a>
         </div>
         <p className="opacity--50">Designed & Built by Tedy</p>

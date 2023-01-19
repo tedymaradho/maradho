@@ -1,4 +1,6 @@
 .heading {
+  font-family: "El Messiri", sans-serif;
+  font-weight: 700;
   width: fit-content;
   font-weight: bold;
   margin-bottom: 2rem;
@@ -10,7 +12,7 @@
   }
 
   &__secondary {
-    font-size: 6rem;
+    font-size: 5rem;
     line-height: 8rem;
   }
 
@@ -40,7 +42,7 @@
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   width: fit-content;
   margin-bottom: 1rem;
   line-height: 3.3rem;
