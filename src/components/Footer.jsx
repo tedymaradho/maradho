@@ -14,8 +14,10 @@ function Footer() {
     setTimeout(() => {
       setEmailCopied(false);
     }, 1200);
+  };
 
-    console.log(emailCopied);
+  const sendMessageHandler = (e) => {
+    e.preventDefault();
   };
 
   return (
@@ -42,7 +44,7 @@ function Footer() {
           </div>
         </div>
         <div className="footer__right-box">
-          <form className="footer__form">
+          <form className="footer__form" onSubmit={sendMessageHandler}>
             <input
               className="footer__form--input"
               placeholder="Your Name"
