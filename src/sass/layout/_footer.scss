@@ -50,6 +50,22 @@
     gap: 0.4rem;
     padding-left: 0.2rem;
     cursor: pointer;
+    position: relative;
+
+    &--tooltip {
+      position: absolute;
+      width: max-content;
+      top: -3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $color-text;
+      padding: 2px 4px;
+      display: none;
+    }
+
+    &:hover &--tooltip {
+      display: inline-block;
+    }
   }
 
   &__address {

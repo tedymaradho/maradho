@@ -34,6 +34,7 @@ function Footer() {
             Your Project
           </div>
           <div className="footer__email" onClick={emailCopyHandler}>
+            <span className="footer__email--tooltip">Click to copy</span>
             <AiOutlineMail size="1.5em" />
             &nbsp;
             {emailCopied === true ? "Email copied ✅" : "maradho@gmail.com"}
