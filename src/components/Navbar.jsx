@@ -5,14 +5,14 @@ import { useInView } from "react-intersection-observer";
 function Navbar() {
   const Navigate = useNavigate();
 
-  const navigateHandler = () => {
-    Navigate("/");
-    document.getElementById("navbar-toggle").checked = false;
-  };
-
   const { ref, inView, entry } = useInView({
     threshold: 0,
   });
+
+  const navigateHandler = () => {
+    document.getElementById("navbar-toggle").checked = false;
+    Navigate("/");
+  };
 
   return (
     <div className="navbar" ref={ref}>
