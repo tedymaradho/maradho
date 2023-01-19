@@ -1,4 +1,5 @@
 .home {
+  // overflow: hidden;
   margin: 0 auto;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.14);
 
@@ -9,6 +10,10 @@
   &__wrapper {
     padding: 0 9rem;
     height: 100%;
+
+    @include respond(phone) {
+      padding: 0 2rem;
+    }
   }
 
   &__section {
@@ -21,33 +26,23 @@
     }
 
     &--header {
+      height: 90vh;
       position: relative;
       z-index: 1;
     }
 
-    &--client,
-    &--sosmed {
-      height: 25.8rem;
-      display: flex;
-      align-items: center;
-      opacity: 80%;
-    }
-
     &--service {
+      height: 90vh;
       position: relative;
       z-index: -1;
-    }
 
-    &--testimoni {
-      background-color: transparent;
-      position: relative;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
+      @include respond(phone) {
+        height: 50vh;
+      }
     }
 
     &--footer {
+      height: 100%;
       background-image: linear-gradient(to bottom, $color-primary, $color-text);
     }
   }
@@ -62,6 +57,12 @@
       width: 85%;
       right: 0;
       clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 40% 100%);
+
+      @include respond(phone) {
+        width: 100%;
+        clip-path: polygon(50% 50%, 120% 50%, 85% 100%, 0% 100%);
+      }
+
       background-image: url("https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fbatik-white.png?alt=media&token=64a70bd5-5051-4eab-b18b-58d2dc6e8b84"),
         linear-gradient(to left, $color-text, $color-primary);
       background-size: contain;
@@ -81,12 +82,11 @@
         30% 25%
       );
       background-image: linear-gradient(to left, $color-text, $color-primary);
-    }
 
-    &--testimoni {
-      left: 0;
-      width: 45%;
-      background-image: linear-gradient(to top, $color-primary, $color-text);
+      @include respond(phone) {
+        width: 100%;
+        clip-path: polygon(0% 0%, 85% 0%, 40% 100%, 0% 100%);
+      }
     }
   }
 }

@@ -22,25 +22,25 @@ function Service() {
           <div className="service__list-box">
             <h1 className="service__number">1</h1>
             <h2 className="service__text">
-              Web
+              <span>Web</span>
               <br />
-              Design
+              <span>Design</span>
             </h2>
           </div>
           <div className="service__list-box">
             <h1 className="service__number">2</h1>
             <h2 className="service__text">
-              Web
+              <span>Web</span>
               <br />
-              Development
+              <span>Development</span>
             </h2>
           </div>
           <div className="service__list-box">
             <h1 className="service__number">3</h1>
             <h2 className="service__text">
-              Web
+              <span>Web</span>
               <br />
-              Optimization
+              <span>Optimization</span>
             </h2>
           </div>
         </div>

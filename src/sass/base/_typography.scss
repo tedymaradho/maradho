@@ -9,11 +9,21 @@
     font-size: 7rem;
     line-height: 9rem;
     animation: moveInLeft 0.9s ease-in-out;
+
+    @include respond(phone) {
+      font-size: 5.5rem;
+      line-height: 7rem;
+    }
   }
 
   &__secondary {
     font-size: 5rem;
     line-height: 8rem;
+
+    @include respond(phone) {
+      font-size: 5.5rem;
+      line-height: 7rem;
+    }
   }
 
   &--dark {

@@ -5,16 +5,25 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
 
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
   &__left-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__right-box {
     color: white;
-    line-height: 1.3;
+    line-height: 1.4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,24 +34,44 @@
     align-items: center;
     gap: 4rem;
 
+    @include respond(phone) {
+      gap: 2rem;
+    }
+
     &:first-child {
       gap: 5.9rem;
+
+      @include respond(phone) {
+        gap: 3.9rem;
+      }
     }
   }
 
   &__number {
-    font-weight: 300;
-    opacity: 10%;
     font-size: 13rem;
+    font-weight: 300;
+    color: rgba(white, 0.3);
     animation: moveInRight 0.9s ease-in-out 0.5s;
     animation-fill-mode: backwards;
+
+    @include respond(phone) {
+      font-size: 12rem;
+    }
   }
 
   &__text {
-    opacity: 70%;
-    font-weight: 300;
     font-size: 4.5rem;
+    font-weight: 300;
     animation: moveInRight 0.9s ease-in-out 0.7s;
     animation-fill-mode: backwards;
+
+    @include respond(phone) {
+      font-size: 4rem;
+
+      & span {
+        padding: 0 0.5rem;
+        background-color: rgba($color-primary, 0.9);
+      }
+    }
   }
 }

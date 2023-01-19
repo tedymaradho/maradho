@@ -11,19 +11,30 @@
     height: 100%;
     display: flex;
 
+    @include respond(phone) {
+      flex-direction: column;
+      gap: 5rem;
+    }
+
     &:last-child {
       display: flex;
       flex-direction: row;
       align-items: flex-end;
       justify-content: space-between;
+
+      @include respond(phone) {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
     }
   }
 
   &__left-box {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
     gap: 2rem;
   }
 
@@ -79,13 +90,22 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @include respond(phone) {
+      height: 50vh;
+    }
   }
 
   &__form {
     width: 30vw;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @include respond(phone) {
+      width: 100%;
+    }
 
     &--input {
       font-family: "Inter", sans-serif;
