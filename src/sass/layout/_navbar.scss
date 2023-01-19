@@ -69,7 +69,7 @@
     right: 3.1rem;
     background-image: radial-gradient($color-primary, $color-text);
     z-index: 4;
-    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
   }
 
   &__checkbox:checked ~ &__background {
