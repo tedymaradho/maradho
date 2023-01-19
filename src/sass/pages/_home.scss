@@ -63,7 +63,7 @@
         clip-path: polygon(50% 50%, 125% 50%, 85% 100%, 0% 100%);
       }
 
-      background-image: url("https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fbatik-white.png?alt=media&token=64a70bd5-5051-4eab-b18b-58d2dc6e8b84"),
+      background-image: url("/src/assets/batik-white.webp"),
         linear-gradient(to left, $color-text, $color-primary);
       background-size: contain;
       background-position: right bottom;

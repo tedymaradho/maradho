@@ -51,8 +51,6 @@
     font-size: 13rem;
     font-weight: 300;
     color: rgba(white, 0.3);
-    animation: moveInRight 0.9s ease-in-out 0.5s;
-    animation-fill-mode: backwards;
 
     @include respond(phone) {
       font-size: 12rem;
@@ -62,8 +60,6 @@
   &__text {
     font-size: 4.5rem;
     font-weight: 300;
-    animation: moveInRight 0.9s ease-in-out 0.7s;
-    animation-fill-mode: backwards;
 
     @include respond(phone) {
       font-size: 4rem;

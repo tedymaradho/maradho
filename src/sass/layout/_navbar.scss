@@ -69,7 +69,6 @@
     right: 3.1rem;
     background-image: radial-gradient($color-primary, $color-text);
     z-index: 4;
-    transition: transform 0.3s;
   }
 
   &__checkbox:checked ~ &__background {
@@ -84,7 +83,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
-    animation-fill-mode: backwards;
 
     & > .btn__inverse--sm {
       font-size: 3rem;
