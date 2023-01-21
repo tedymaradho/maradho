@@ -67,7 +67,7 @@
     position: fixed;
     top: 3.1rem;
     right: 3.1rem;
-    background-image: radial-gradient($color-primary, $color-text);
+    background-image: radial-gradient($color-primary, rgba($color-text, 0.95));
     z-index: 4;
   }
 
