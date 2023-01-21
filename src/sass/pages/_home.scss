@@ -64,7 +64,7 @@
       }
 
       background-image: url("/src/assets/batik-white.webp"),
-        linear-gradient(to left, $color-text, $color-primary);
+        linear-gradient(to left, $color-text 0%, $color-primary 50%);
       background-size: contain;
       background-position: right bottom;
       background-repeat: no-repeat;
@@ -81,7 +81,11 @@
         40% 100%,
         30% 25%
       );
-      background-image: linear-gradient(to left, $color-text, $color-primary);
+      background-image: linear-gradient(
+        to left,
+        $color-text 0%,
+        $color-primary 50%
+      );
 
       @include respond(phone) {
         width: 100%;
