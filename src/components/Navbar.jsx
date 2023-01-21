@@ -39,13 +39,6 @@ function Navbar() {
         </a>
         <a
           className="btn btn__inverse btn__inverse--sm border--no"
-          href="#service"
-          onClick={navigateHandler}
-        >
-          Services
-        </a>
-        <a
-          className="btn btn__inverse btn__inverse--sm border--no"
           href="#portfolio"
           onClick={navigateHandler}
         >
