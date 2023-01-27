@@ -34,16 +34,25 @@
     align-items: center;
     gap: 4rem;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       gap: 2rem;
     }
 
     &:first-child {
       gap: 5.9rem;
+      animation: moveInRight 0.9s ease-in-out;
 
-      @include respond(phone) {
+      @include respond(tab-port) {
         gap: 3.9rem;
       }
+    }
+
+    &:nth-child(2) {
+      animation: moveInRight 1.3s ease-in-out;
+    }
+
+    &:last-child {
+      animation: moveInRight 1.5s ease-in-out;
     }
   }
 
@@ -52,7 +61,7 @@
     font-weight: 300;
     color: rgba(white, 0.3);
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       font-size: 12rem;
     }
   }
@@ -60,6 +69,10 @@
   &__text {
     font-size: 4.5rem;
     font-weight: 300;
+
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
 
     @include respond(phone) {
       font-size: 4rem;

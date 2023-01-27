@@ -1,15 +1,10 @@
-import Header from "../components/Header";
-import Navbar from "../components/Navbar";
-import Service from "../components/Service";
-import Portfolio from "../components/Portfolio";
-import Footer from "../components/Footer";
-import { useInView } from "react-intersection-observer";
+import Header from '../components/Header';
+import Navbar from '../components/Navbar';
+import Service from '../components/Service';
+import Portfolio from '../components/Portfolio';
+import Footer from '../components/Footer';
 
 function Home() {
-  const { ref, inView, entry } = useInView({
-    threshold: 0,
-  });
-
   return (
     <div className="home">
       <div className="home__section--navbar">
@@ -17,10 +12,10 @@ function Home() {
           <Navbar />
         </div>
       </div>
-      <div className="home__section home__section--header" ref={ref}>
+      <div className="home__section home__section--header">
         <div className="home__wrapper">
-          {inView === true && <Header />}
-          <div className="home__shape home__shape--header"></div>
+          <Header />
+          <div className="home__shape home__shape--header" />
         </div>
       </div>
       <div className="home__section home__section--service" id="service">

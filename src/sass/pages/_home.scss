@@ -36,6 +36,9 @@
       position: relative;
       z-index: -1;
 
+      @include respond(tab-port) {
+        height: 100%;
+      }
       @include respond(phone) {
         height: 50vh;
       }
@@ -63,7 +66,7 @@
         clip-path: polygon(50% 50%, 125% 50%, 85% 100%, 0% 100%);
       }
 
-      background-image: url("/src/assets/batik-white.webp"),
+      background-image: url('/src/assets/batik-white.webp'),
         linear-gradient(to left, $color-text 0%, $color-primary 50%);
       background-size: contain;
       background-position: right bottom;

@@ -1,5 +1,5 @@
 .heading {
-  font-family: "El Messiri", sans-serif;
+  font-family: 'El Messiri', sans-serif;
   font-weight: 700;
   width: fit-content;
   font-weight: bold;
@@ -10,18 +10,18 @@
     line-height: 9rem;
     animation: moveInLeft 0.9s ease-in-out;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       font-size: 5.5rem;
       line-height: 7rem;
     }
   }
 
   &__secondary {
-    font-size: 5rem;
+    font-size: 5.5rem;
     line-height: 8rem;
 
-    @include respond(phone) {
-      font-size: 5.5rem;
+    @include respond(tab-port) {
+      font-size: 4.5rem;
       line-height: 7rem;
     }
   }
@@ -50,9 +50,6 @@
   &--weak {
     font-size: 4rem;
   }
-}
-
-.title {
 }
 
 .subtitle {
