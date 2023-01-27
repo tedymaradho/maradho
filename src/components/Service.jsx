@@ -26,7 +26,7 @@ function Service() {
           provide support for the long term.
         </p>
       </div>
-      <div className="service__right-box">
+      <div className="service__right-box" ref={serviceRef}>
         <div>
           <div
             className={`service__list-box ${
