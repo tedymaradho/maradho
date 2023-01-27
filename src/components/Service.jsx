@@ -5,12 +5,8 @@ function Service() {
 
   return (
     <div className="service">
-      <div className="service__left-box" ref={serviceRef}>
-        <h1
-          className={`heading heading__primary heading--dark ${
-            serviceIsVisible ? 'animation--left' : ''
-          }`}
-        >
+      <div className="service__left-box">
+        <h1 className="heading heading__primary heading--dark">
           Solving
           <br />
           problems&nbsp;
@@ -20,7 +16,7 @@ function Service() {
           &nbsp;services
         </h1>
 
-        <p className={`subtitle ${serviceIsVisible ? 'animation--left' : ''}`}>
+        <p className="subtitle">
           Provide solutions to your problems, and
           <br />
           provide support for the long term.
