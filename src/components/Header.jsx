@@ -18,29 +18,34 @@ function Header() {
   return (
     <div className="header">
       <div className="header__left-box" ref={headerRef}>
-        {headerIsVisible && (
-          <h1 className="heading heading__primary heading--dark">
-            <span>Tedy</span>
-            <br />
-            <span>Maradho&nbsp;Pasa</span>
-          </h1>
-        )}
-        {headerIsVisible && (
-          <p className="subtitle">
-            Hi, I'm a <span ref={textRef}></span>
-            <br />
-            Serving web design, creation and development to become a stunning
-            website.
-          </p>
-        )}
-        {headerIsVisible && (
-          <div className="header__button-box">
-            <a className="btn btn__primary" href="#footer">
-              Let's Discuss&nbsp;
-              <FiSend />
-            </a>
-          </div>
-        )}
+        <h1
+          className={`heading heading__primary heading--dark ${
+            headerIsVisible ? 'animation--left' : ''
+          }`}
+        >
+          <span>Tedy</span>
+          <br />
+          <span>Maradho&nbsp;Pasa</span>
+        </h1>
+
+        <p className={`subtitle ${headerIsVisible ? 'animation--right' : ''}`}>
+          Hi, I'm a <span ref={textRef}></span>
+          <br />
+          Serving web design, creation and development to become a stunning
+          website.
+        </p>
+
+        <div className="header__button-box">
+          <a
+            className={`btn btn__primary ${
+              headerIsVisible ? 'animation--bottom' : ''
+            }`}
+            href="#footer"
+          >
+            Let's Discuss&nbsp;
+            <FiSend />
+          </a>
+        </div>
       </div>
       <div className="header__right-box"></div>
     </div>

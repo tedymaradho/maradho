@@ -14,8 +14,6 @@
   &__primary {
     background-image: linear-gradient(to bottom, $color-primary, $color-text);
     color: white;
-    animation: moveInBottom 0.5s ease-out 0.7s;
-    animation-fill-mode: backwards;
 
     &:hover {
       background-image: linear-gradient(to top, $color-primary, $color-text);
