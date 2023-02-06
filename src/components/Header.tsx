@@ -1,19 +1,8 @@
 import { FiSend } from 'react-icons/fi';
-import { init } from 'ityped';
-import { useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 function Header() {
-  const textRef = useRef();
   const { ref: headerRef, inView: headerIsVisible } = useInView();
-
-  useEffect(() => {
-    init(textRef.current, {
-      showCursor: true,
-      strings: ['Web Designer', 'Frontend Web Developer'],
-      cursorChar: '_',
-    });
-  }, []);
 
   return (
     <div className="header">
@@ -29,7 +18,7 @@ function Header() {
         </h1>
 
         <p className={`subtitle ${headerIsVisible ? 'animation--right' : ''}`}>
-          Hi, I'm a <span ref={textRef}></span>
+          Hi, I'm a Frontend Web Developer
           <br />
           Serving web design, creation and development to become a stunning
           website.

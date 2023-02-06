@@ -1,22 +1,22 @@
-import Logo from "../assets/logo.png";
-import { BsGithub, BsLinkedin, BsYoutube } from "react-icons/bs";
-import { AiOutlineMail } from "react-icons/ai";
-import { CiLocationOn } from "react-icons/ci";
-import { FiSend } from "react-icons/fi";
-import { useState } from "react";
+import Logo from '../assets/logo.png';
+import { BsGithub, BsLinkedin, BsYoutube } from 'react-icons/bs';
+import { AiOutlineMail } from 'react-icons/ai';
+import { CiLocationOn } from 'react-icons/ci';
+import { FiSend } from 'react-icons/fi';
+import { useState } from 'react';
 
 function Footer() {
   const [emailCopied, setEmailCopied] = useState(false);
 
   const emailCopyHandler = () => {
-    navigator.clipboard.writeText("maradho@gmail.com");
+    navigator.clipboard.writeText('maradho@gmail.com');
     setEmailCopied(true);
     setTimeout(() => {
       setEmailCopied(false);
     }, 1200);
   };
 
-  const sendMessageHandler = (e) => {
+  const sendMessageHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 
@@ -37,7 +37,7 @@ function Footer() {
             <span className="footer__email--tooltip">Click to copy</span>
             <AiOutlineMail size="1.5em" />
             &nbsp;
-            {emailCopied === true ? "Email copied ✅" : "maradho@gmail.com"}
+            {emailCopied === true ? 'Email copied ✅' : 'maradho@gmail.com'}
           </div>
           <div className="footer__address">
             <CiLocationOn size="1.8em" />
