@@ -20,7 +20,7 @@ function Portfolio() {
       <div className="portfolio__right-box">
         <img
           className="portfolio__img"
-          src="https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fecommerce.webp?alt=media&token=736344a4-6fd9-4207-ba46-6cde6a8601df"
+          src="https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fecommerce.webp?alt=media&token=8a6daa1a-eda8-42cc-a756-99ea70168a23"
           alt="First Portfolio"
         />
       </div>

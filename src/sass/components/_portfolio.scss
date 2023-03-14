@@ -46,6 +46,7 @@
     justify-content: flex-end;
 
     @include respond(phone) {
+      order: -1;
       height: fit-content;
       justify-content: center;
       align-items: flex-start;
