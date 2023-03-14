@@ -24,7 +24,7 @@ function Home() {
         </div>
         <div className="home__shape home__shape--service" />
       </div>
-      <div className="home__section" id="portfolio">
+      <div className="home__section--portfolio" id="portfolio">
         <div className="home__wrapper">
           <Portfolio />
         </div>

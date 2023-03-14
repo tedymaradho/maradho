@@ -1,29 +1,26 @@
-import { BsArrowUpRight } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+import { BsArrowUpRight } from 'react-icons/bs';
 
 function Portfolio() {
-  const Navigate = useNavigate();
-
-  const toPortfolioHandler = () => Navigate("/portfolio");
-
   return (
     <div className="portfolio">
       <div className="portfolio__left-box">
-        <p className="subtitle">Bluder Tunjungan, Surabaya, Indonesia</p>
-        <h1 className="heading heading__secondary heading--dark">
-          Website
-          <br />
-          Design & Build
-        </h1>
-        <a className="btn btn__inverse" href="#" onClick={toPortfolioHandler}>
-          See this project&nbsp;
+        <p className="portfolio__frontend">Frontend : ReactJS, Typescript</p>
+        <p className="portfolio__backend">Backend : NodeJS, ExpressJS</p>
+        <p className="portfolio__database">Database : Mongodb</p>
+        <h1 className="heading heading__secondary heading--dark">Ecommerce</h1>
+        <a
+          href="http://shop.maradho.com"
+          target="_blank"
+          className="btn btn__inverse"
+        >
+          Live Demo&nbsp;
           <BsArrowUpRight />
         </a>
       </div>
       <div className="portfolio__right-box">
         <img
           className="portfolio__img"
-          src="https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fportfolio-1.png?alt=media&token=e76746ee-d87a-4bb9-b500-ff7665e5dbcc"
+          src="https://firebasestorage.googleapis.com/v0/b/maradho-8c79e.appspot.com/o/img%2Fecommerce.webp?alt=media&token=736344a4-6fd9-4207-ba46-6cde6a8601df"
           alt="First Portfolio"
         />
       </div>

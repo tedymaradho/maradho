@@ -2,12 +2,22 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin: 10rem 0;
+
+  &__frontend,
+  &__backend,
+  &__database {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #555;
+    line-height: 2;
+  }
 
   @include respond(phone) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 5rem;
   }
 
   &__left-box {
@@ -18,7 +28,8 @@
     text-align: left;
 
     @include respond(phone) {
-      justify-content: flex-end;
+      height: fit-content;
+      // justify-content: flex-end;
       align-items: center;
       text-align: center;
     }
@@ -35,17 +46,16 @@
     justify-content: flex-end;
 
     @include respond(phone) {
+      height: fit-content;
       justify-content: center;
       align-items: flex-start;
     }
   }
 
   &__img {
-    height: 60vh;
-    box-shadow: 5px 35px 32px -30px rgba(81, 115, 78, 0.9);
+    width: 100%;
 
     @include respond(phone) {
-      height: 25vh;
     }
   }
 }
