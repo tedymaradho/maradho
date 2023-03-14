@@ -18,10 +18,10 @@ function Header() {
         </h1>
 
         <p className={`subtitle ${headerIsVisible ? 'animation--right' : ''}`}>
-          Hi, I'm a Frontend Web Developer
+          Hi, I'm a Web Developer
           <br />
-          Serving web design, creation and development to become a stunning
-          website.
+          Providing web design, development, and enhancement services to create
+          stunning websites.
         </p>
 
         <div className="header__button-box">
