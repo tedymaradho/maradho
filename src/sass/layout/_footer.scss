@@ -149,5 +149,12 @@
     font-size: 1.4rem;
     font-weight: 100;
     color: $color-bg;
+    display: flex;
+    gap: 1rem;
+
+    &--icon {
+      display: flex;
+      align-items: center;
+    }
   }
 }

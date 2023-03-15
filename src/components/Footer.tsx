@@ -3,7 +3,7 @@ import { BsGithub, BsLinkedin, BsYoutube } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 import { CiLocationOn } from 'react-icons/ci';
 import { FiSend } from 'react-icons/fi';
-import { FaReact, FaNodeJs } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaSass } from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
 import { useState } from 'react';
 
@@ -102,11 +102,19 @@ function Footer() {
             <BsYoutube size="3rem" />
           </a>
         </div>
-        <p className="footer__developer">
-          Built using <FaReact className="icon__react" />
-          &nbsp;
-          <SiTypescript className="icon__typescript" /> by Tedy Maradho
-        </p>
+        <div className="footer__developer">
+          Built using
+          <div className="footer__developer--icon">
+            <FaReact className="icon__react" />
+            &nbsp;
+            <SiTypescript className="icon__typescript" />
+            &nbsp;
+            <FaNodeJs className="icon__nodejs" />
+            &nbsp;
+            <FaSass className="icon__sass" />
+          </div>
+          by Tedy Maradho
+        </div>
       </div>
     </div>
   );
